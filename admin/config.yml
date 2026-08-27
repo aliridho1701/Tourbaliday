@@ -14,3 +14,26 @@ collections:
       - {label: "Gambar Utama", name: "image", widget: "image"}
       - {label: "Isi Konten", name: "body", widget: "markdown"}
 
+  - name: "tours"
+    label: "Paket Tur"
+    folder: "content/tours"
+    create: true
+    fields:
+      - {label: "Nama Paket Tur", name: "title", widget: "string"}
+      - {label: "Durasi", name: "duration", widget: "string", default: "10 Jam"}
+      - {label: "Harga (Contoh: Rp 650.000)", name: "price", widget: "string"}
+      - {label: "Lokasi / Rute", name: "location", widget: "string"}
+      - {label: "Gambar Tur", name: "image", widget: "image"}
+      - {label: "Deskripsi Singkat", name: "description", widget: "text"}
+
+  - name: "settings"
+    label: "Pengaturan Kontak & Umum"
+    files:
+      - file: "content/settings.json"
+        name: "general"
+        label: "Informasi Kontak"
+        fields:
+          - {label: "Nomor WhatsApp (Format: 628xxxx)", name: "whatsapp", widget: "string"}
+          - {label: "Alamat Email", name: "email", widget: "string"}
+          - {label: "Alamat Kantor / Lokasi", name: "address", widget: "string"}
+          - {label: "Jam Operasional", name: "hours", widget: "string"}
