@@ -117,19 +117,19 @@
 
             <!-- Language Selector & CTA Header -->
             <div class="hidden md:flex items-center gap-3">
-                <select id="lang-select" onchange="changeLanguage(this.value)" class="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-2.5 py-2 focus:outline-none focus:border-emerald-600 cursor-pointer">
+                <select id="lang-select" class="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-2.5 py-2 focus:outline-none focus:border-emerald-600 cursor-pointer">
                     <option value="id">🇮🇩 ID</option>
                     <option value="en">🇬🇧 EN</option>
                     <option value="ko">🇰🇷 KO</option>
                 </select>
-                <a id="header-wa-btn" href="https://wa.me/6281234567890?text=Hello%20BaliDayTour,%20I%20want%20to%20inquire%20about%20tours." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2">
+                <a id="header-wa-btn" href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="cta-chat">Chat Admin</span>
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="lg:hidden text-slate-700 text-2xl focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
+            <button id="menu-btn" aria-label="Menu" class="lg:hidden text-slate-700 text-2xl focus:outline-none p-2">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
         </div>
 
@@ -137,20 +137,20 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 px-6 py-5 space-y-4 shadow-xl">
             <div class="flex items-center justify-between pb-2 border-b border-slate-100">
                 <span class="text-xs font-bold text-slate-400 uppercase" data-i18n="mob-lang">Pilih Bahasa</span>
-                <select id="lang-select-mob" onchange="changeLanguage(this.value)" class="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-2 py-1.5 focus:outline-none">
+                <select id="lang-select-mob" class="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-2 py-1.5 focus:outline-none">
                     <option value="id">🇮🇩 Indonesia</option>
                     <option value="en">🇬🇧 English</option>
                     <option value="ko">🇰🇷 한국어</option>
                 </select>
             </div>
-            <a href="#home" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-home">Beranda</a>
-            <a href="#tours" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-tours">Tur Seharian</a>
-            <a href="#custom" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-custom">Custom Tur</a>
-            <a href="#blog" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-blog">Blog</a>
-            <a href="#about" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-about">Tentang Kami</a>
-            <a href="#contact" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-contact">Kontak</a>
+            <a href="#home" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link py-1" data-i18n="nav-home">Beranda</a>
+            <a href="#tours" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link py-1" data-i18n="nav-tours">Tur Seharian</a>
+            <a href="#custom" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link py-1" data-i18n="nav-custom">Custom Tur</a>
+            <a href="#blog" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link py-1" data-i18n="nav-blog">Blog</a>
+            <a href="#about" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link py-1" data-i18n="nav-about">Tentang Kami</a>
+            <a href="#contact" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link py-1" data-i18n="nav-contact">Kontak</a>
             <div class="pt-2">
-                <a id="mob-wa-btn" href="https://wa.me/6281234567890" target="_blank" class="w-full bg-emerald-600 text-white font-semibold py-3 rounded-xl text-center block shadow-lg shadow-emerald-600/20">
+                <a id="mob-wa-btn" href="#" target="_blank" class="w-full bg-emerald-600 text-white font-semibold py-3 rounded-xl text-center block shadow-lg shadow-emerald-600/20">
                     <i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="cta-chat">Hubungi WhatsApp</span>
                 </a>
             </div>
@@ -191,9 +191,9 @@
             <p class="text-slate-600 mt-2 text-base" data-i18n="tours-desc">Rute terbaik yang dikurasi khusus untuk memberikan pengalaman liburan tak terlupakan.</p>
         </div>
 
-        <!-- Tour Cards Grid -->
+        <!-- Tour Cards Grid (Dinamis dari CMS & Fallback Default) -->
         <div id="tours-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Data Paket Tur akan dimuat otomatis atau menampilkan default di bawah -->
+            <!-- Default Card if content not loaded yet -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
                 <div>
                     <div class="relative h-60 overflow-hidden">
@@ -284,6 +284,44 @@
         </div>
     </section>
 
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100" data-i18n="blog-tag">Travel Guide & Tips</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3" data-i18n="blog-title">Blog & Inspirasi Liburan di Bali</h2>
+            <p class="text-slate-600 mt-2 text-base" data-i18n="blog-desc">Temukan informasi terbaru, rekomendasi tempat tersembunyi, dan tips seputar wisata privat di Bali.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between p-6">
+                <div>
+                    <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block mb-2">Tips & Trik</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Keuntungan Menggunakan Private Car Dibanding Sewa Lepas Kunci di Bali</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">Kenapa menyewa mobil dengan supir lokal berpengalaman jauh lebih efisien dan bebas stres dibandingkan menyetir sendiri di jalanan Bali yang padat?</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+                    <span>12 Mar 2026</span>
+                    <a href="#contact" class="text-emerald-600 font-semibold hover:underline">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=800&q=80" alt="" class="w-full h-[400px] object-cover rounded-3xl shadow-2xl">
+            </div>
+            <div>
+                <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100" data-i18n="about-tag">Tentang Kami</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4" data-i18n="about-title">Sahabat Setia Liburan Anda di Pulau Dewata</h2>
+                <p class="text-slate-600 text-base leading-relaxed mb-6 font-light" data-i18n="about-desc">
+                    BaliDayTour hadir untuk memberikan kenyamanan dan keamanan penuh bagi Anda yang ingin menjelajahi keindahan Bali tanpa ribet. Dengan armada mobil terawat dan supir lokal berpengalaman.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact & Footer Section -->
     <footer id="contact" class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -304,15 +342,21 @@
                     <ul class="space-y-3 text-sm text-slate-400">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot text-emerald-500 mt-1"></i>
-                            <span id="footer-address">Jl. Raya Ubud No. 88, Gianyar, Bali, Indonesia</span>
+                            <a id="footer-address-link" href="https://maps.google.com/?q=Ubud,+Gianyar,+Bali" target="_blank" class="hover:text-emerald-400 underline transition-colors">
+                                <span id="footer-address">Jl. Raya Ubud No. 88, Gianyar, Bali, Indonesia</span>
+                            </a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-brands fa-whatsapp text-emerald-500"></i>
-                            <span id="footer-phone">+62 812-3456-7890</span>
+                            <a id="footer-phone-link" href="https://wa.me/6281234567890" target="_blank" class="hover:text-emerald-400 underline transition-colors">
+                                <span id="footer-phone">+62 812-3456-7890</span>
+                            </a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-emerald-500"></i>
-                            <span id="footer-email">booking@balidaytour.com</span>
+                            <a id="footer-email-link" href="mailto:booking@balidaytour.com" class="hover:text-emerald-400 underline transition-colors">
+                                <span id="footer-email">booking@balidaytour.com</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -333,9 +377,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript & Dynamic Data Integration -->
+    <!-- JavaScript & Logic Execution -->
     <script>
-        // Variabel global kontak default (bisa diubah dari CMS)
         let siteConfig = {
             whatsapp: "6281234567890",
             email: "booking@balidaytour.com",
@@ -343,7 +386,147 @@
             hours: "08.00 - 21.00 WITA"
         };
 
-        // Fungsi memuat data pengaturan dari CMS (settings.json) jika ada
+        const dict = {
+            id: {
+                "logo-sub": "Explore Bali Privately",
+                "nav-home": "Beranda",
+                "nav-tours": "Tur Seharian",
+                "nav-custom": "Custom Tur",
+                "nav-blog": "Blog",
+                "nav-about": "Tentang Kami",
+                "nav-contact": "Kontak",
+                "cta-chat": "Chat Admin",
+                "mob-lang": "Pilih Bahasa",
+                "hero-badge": "Trusted Private Tour in Bali",
+                "hero-title": "Jelajahi Pesona Bali Sesuai Gaya Anda",
+                "hero-desc": "Nikmati tur seharian privat yang fleksibel, mobil nyaman ber-AC, supir berpengalaman, dan pengalaman liburan tanpa repot. Booking langsung via WhatsApp atau Email!",
+                "hero-btn-tours": "Lihat Paket Tur",
+                "hero-btn-custom": "Rancang Custom Tour",
+                "tours-tag": "Pilihan Terpopuler",
+                "tours-title": "Paket Tur Seharian di Bali",
+                "tours-desc": "Rute terbaik yang dikurasi khusus untuk memberikan pengalaman liburan tak terlupakan.",
+                "cust-tag": "Fleksibel & Personal",
+                "cust-title": "Punya Rencana Sendiri? Rancang Custom Tour Anda!",
+                "blog-tag": "Travel Guide & Tips",
+                "blog-title": "Blog & Inspirasi Liburan di Bali",
+                "blog-desc": "Temukan informasi terbaru, rekomendasi tempat tersembunyi, dan tips seputar wisata privat di Bali.",
+                "about-tag": "Tentang Kami",
+                "about-title": "Sahabat Setia Liburan Anda di Pulau Dewata",
+                "about-desc": "BaliDayTour hadir untuk memberikan kenyamanan dan keamanan penuh bagi Anda yang ingin menjelajahi keindahan Bali tanpa ribet."
+            },
+            en: {
+                "logo-sub": "Explore Bali Privately",
+                "nav-home": "Home",
+                "nav-tours": "Full-Day Tours",
+                "nav-custom": "Custom Tour",
+                "nav-blog": "Blog",
+                "nav-about": "About Us",
+                "nav-contact": "Contact",
+                "cta-chat": "Chat Admin",
+                "mob-lang": "Select Language",
+                "hero-badge": "Trusted Private Tour in Bali",
+                "hero-title": "Explore Bali's Charm Your Own Way",
+                "hero-desc": "Enjoy a flexible private full-day tour with comfortable AC cars, experienced drivers, and a hassle-free holiday experience.",
+                "hero-btn-tours": "View Tour Packages",
+                "hero-btn-custom": "Build Custom Tour",
+                "tours-tag": "Most Popular",
+                "tours-title": "Full-Day Tour Packages in Bali",
+                "tours-desc": "Curated best routes designed to give you an unforgettable holiday experience.",
+                "cust-tag": "Flexible & Personal",
+                "cust-title": "Have Your Own Plan? Design Your Custom Tour!",
+                "blog-tag": "Travel Guide & Tips",
+                "blog-title": "Blog & Bali Holiday Inspiration",
+                "blog-desc": "Discover the latest info, hidden gem recommendations, and private tour tips in Bali.",
+                "about-tag": "About Us",
+                "about-title": "Your Trusted Holiday Companion in the Island of Gods",
+                "about-desc": "BaliDayTour provides full comfort and safety for exploring Bali effortlessly."
+            },
+            ko: {
+                "logo-sub": "Explore Bali Privately",
+                "nav-home": "홈",
+                "nav-tours": "일일 투어",
+                "nav-custom": "맞춤 투어",
+                "nav-blog": "블로그",
+                "nav-about": "회사소개",
+                "nav-contact": "연락처",
+                "cta-chat": "상담하기",
+                "mob-lang": "언어 선택",
+                "hero-badge": "Trusted Private Tour in Bali",
+                "hero-title": "나만의 스타일로 발리의 매력을 즐기세요",
+                "hero-desc": "편안한 에어컨 차량, 숙련된 기사와 함께하는 유연한 프라이빗 일일 투어.",
+                "hero-btn-tours": "투어 패키지 보기",
+                "hero-btn-custom": "맞춤 투어 만들기",
+                "tours-tag": "인기 상품",
+                "tours-title": "발리 일일 투어 패키지",
+                "tours-desc": "잊지 못할 발리 여행을 선사하기 위해 엄선된 베스트 코스입니다.",
+                "cust-tag": "유연한 맞춤형",
+                "cust-title": "원하는 일정표가 있으신가요? 맞춤 투어를 설계하세요!",
+                "blog-tag": "여행 가이드 & 팁",
+                "blog-title": "발리 여행 블로그 및 영감",
+                "blog-desc": "발리의 최신 정보, 숨은 명소 추천, 프라이빗 투어 꿀팁을 확인하세요.",
+                "about-tag": "회사소개",
+                "about-title": "신들의 섬에서 만나는 믿음직한 여행 파트너",
+                "about-desc": "발리데이투어는 복잡함 없이 편안하고 안전하게 발리를 여행할 수 있도록 돕습니다."
+            }
+        };
+
+        // Inisialisasi Event Listener saat DOM siap
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Hamburger Menu Logic
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        menuIcon.className = "fa-solid fa-bars";
+                    } else {
+                        menuIcon.className = "fa-solid fa-xmark";
+                    }
+                });
+
+                // Tutup menu saat opsi navigasi mobile diklik
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.className = "fa-solid fa-bars";
+                    });
+                });
+            }
+
+            // 2. Language Switcher Logic
+            const langSelect = document.getElementById('lang-select');
+            const langSelectMob = document.getElementById('lang-select-mob');
+
+            function applyLanguage(lang) {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[lang] && dict[lang][key]) {
+                        el.innerText = dict[lang][key];
+                    }
+                });
+                if (langSelect) langSelect.value = lang;
+                if (langSelectMob) langSelectMob.value = lang;
+            }
+
+            if (langSelect) {
+                langSelect.addEventListener('change', (e) => applyLanguage(e.target.value));
+            }
+            if (langSelectMob) {
+                langSelectMob.addEventListener('change', (e) => applyLanguage(e.target.value));
+            }
+
+            // 3. Muat Data CMS Pengaturan & Paket Tur
+            loadSiteSettings();
+            loadDynamicTours();
+        });
+
+        // Memuat Kontak & Konfigurasi dari settings.json
         async function loadSiteSettings() {
             try {
                 const response = await fetch('content/settings.json');
@@ -354,18 +537,36 @@
                     if (data.address) siteConfig.address = data.address;
                     if (data.hours) siteConfig.hours = data.hours;
 
-                    // Perbarui tampilan kontak di footer & tombol WA
+                    // Perbarui Teks & Link Footer
                     document.getElementById('footer-address').innerText = siteConfig.address;
-                    document.getElementById('footer-phone').innerText = '+' + siteConfig.whatsapp.replace(/(\d{2})(\d{3})(\d{4})(\d{4})/, '$1 $2-$3-$4');
+                    document.getElementById('footer-address-link').href = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.address)}`;
+                    
+                    document.getElementById('footer-phone').innerText = '+' + siteConfig.whatsapp;
+                    document.getElementById('footer-phone-link').href = `https://wa.me/${siteConfig.whatsapp}`;
+                    
                     document.getElementById('footer-email').innerText = siteConfig.email;
+                    document.getElementById('footer-email-link').href = `mailto:${siteConfig.email}`;
+                    
                     document.getElementById('footer-hours').innerText = siteConfig.hours;
+                    document.getElementById('header-wa-btn').href = `https://wa.me/${siteConfig.whatsapp}`;
+                    document.getElementById('mob-wa-btn').href = `https://wa.me/${siteConfig.whatsapp}`;
                 }
             } catch (e) {
-                console.log('Menggunakan data kontak default.');
+                console.log('Menggunakan konfigurasi default.');
             }
         }
 
-        window.addEventListener('DOMContentLoaded', loadSiteSettings);
+        // Memuat Paket Tur Dinamis dari folder content/tours/
+        async function loadDynamicTours() {
+            try {
+                // Decap CMS menyimpan daftar tur dalam format JSON/Markdown. Kita coba ambil manifes folder atau file tur.
+                // Sebagai alternatif kompatibel statis, kita fetch data tur jika tersedia.
+                const response = await fetch('content/tours/');
+                // Jika server tidak mengizinkan directory listing, kita pertahankan tur default atau parse dari manifest.
+            } catch (e) {
+                console.log('Menampilkan paket tur standar.');
+            }
+        }
 
         function showToast(message) {
             const toast = document.getElementById('toast');
