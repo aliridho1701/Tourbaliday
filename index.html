@@ -122,7 +122,7 @@
                     <option value="en">🇬🇧 EN</option>
                     <option value="ko">🇰🇷 KO</option>
                 </select>
-                <a href="https://wa.me/6281234567890?text=Hello%20BaliDayTour,%20I%20want%20to%20inquire%20about%20tours." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2">
+                <a id="header-wa-btn" href="https://wa.me/6281234567890?text=Hello%20BaliDayTour,%20I%20want%20to%20inquire%20about%20tours." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="cta-chat">Chat Admin</span>
                 </a>
             </div>
@@ -150,7 +150,7 @@
             <a href="#about" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-about">Tentang Kami</a>
             <a href="#contact" class="block font-medium text-slate-700 hover:text-emerald-600 mobile-link" data-i18n="nav-contact">Kontak</a>
             <div class="pt-2">
-                <a href="https://wa.me/6281234567890" target="_blank" class="w-full bg-emerald-600 text-white font-semibold py-3 rounded-xl text-center block shadow-lg shadow-emerald-600/20">
+                <a id="mob-wa-btn" href="https://wa.me/6281234567890" target="_blank" class="w-full bg-emerald-600 text-white font-semibold py-3 rounded-xl text-center block shadow-lg shadow-emerald-600/20">
                     <i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="cta-chat">Hubungi WhatsApp</span>
                 </a>
             </div>
@@ -180,46 +180,6 @@
                     <i class="fa-solid fa-sliders"></i> <span data-i18n="hero-btn-custom">Rancang Custom Tour</span>
                 </a>
             </div>
-
-            <!-- Trust Badges -->
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/10 max-w-5xl mx-auto text-left">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-                        <i class="fa-solid fa-car"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm" data-i18n="feat-1-title">100% Private Car</h4>
-                        <p class="text-xs text-slate-400" data-i18n="feat-1-desc">Tidak digabung grup lain</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm" data-i18n="feat-2-title">Supir Profesional</h4>
-                        <p class="text-xs text-slate-400" data-i18n="feat-2-desc">Ramah & berpengalaman</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm" data-i18n="feat-3-title">Tanpa Biaya Tersembunyi</h4>
-                        <p class="text-xs text-slate-400" data-i18n="feat-3-desc">Harga transparan & jujur</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm" data-i18n="feat-4-title">Booking Mudah</h4>
-                        <p class="text-xs text-slate-400" data-i18n="feat-4-desc">Via WhatsApp atau Email</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -228,298 +188,97 @@
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100" data-i18n="tours-tag">Pilihan Terpopuler</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3" data-i18n="tours-title">Paket Tur Seharian di Bali</h2>
-            <p class="text-slate-600 mt-2 text-base" data-i18n="tours-desc">Rute terbaik yang dikurasi khusus untuk memberikan pengalaman liburan tak terlupakan dalam waktu 8-10 jam.</p>
+            <p class="text-slate-600 mt-2 text-base" data-i18n="tours-desc">Rute terbaik yang dikurasi khusus untuk memberikan pengalaman liburan tak terlupakan.</p>
         </div>
 
         <!-- Tour Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Tour 1 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between transition-all hover:-translate-y-1">
+        <div id="tours-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Data Paket Tur akan dimuat otomatis atau menampilkan default di bawah -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
                 <div>
                     <div class="relative h-60 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=800&q=80" alt="Kintamani Volcano & Ubud Tour" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=800&q=80" alt="" class="w-full h-full object-cover">
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-800 shadow-md">
-                            <i class="fa-regular fa-clock text-emerald-600 mr-1"></i> <span data-i18n="tour-duration">10 Jam</span>
+                            <i class="fa-regular fa-clock text-emerald-600 mr-1"></i> 10 Jam
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 text-xs font-semibold text-emerald-600 mb-2">
                             <i class="fa-solid fa-location-dot"></i> Ubud - Kintamani - Tegalalang
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="t1-name">Kintamani Volcano & Ubud Cultural Tour</h3>
-                        <p class="text-slate-600 text-sm mb-4" data-i18n="t1-desc">Saksikan pemandangan megah Gunung Batur, jelajahi terasering sawah Tegalalang, mampir ke agrowisata kopi, dan belanja di Pasar Seni Ubud.</p>
-                        
-                        <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-1">Mobil Privat ber-AC + BBM</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-2">Supir Profesional merangkap Guide</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-3">Tiket Masuk Objek Wisata Utama</span></li>
-                        </ul>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Kintamani Volcano & Ubud Cultural Tour</h3>
+                        <p class="text-slate-600 text-sm mb-4">Saksikan pemandangan megah Gunung Batur, jelajahi terasering sawah Tegalalang, mampir ke agrowisata kopi.</p>
                     </div>
                 </div>
                 <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50">
                     <div class="flex items-center justify-between mb-4 pt-4">
-                        <span class="text-[10px] uppercase text-slate-400 block font-semibold" data-i18n="price-start">Mulai Dari</span>
-                        <span class="text-lg font-black text-slate-900">Rp 650.000 <span class="text-xs font-normal text-slate-500" data-i18n="price-unit">/ mobil</span></span>
+                        <span class="text-[10px] uppercase text-slate-400 block font-semibold">Mulai Dari</span>
+                        <span class="text-lg font-black text-slate-900">Rp 650.000 <span class="text-xs font-normal text-slate-500">/ mobil</span></span>
                     </div>
                     <div class="grid grid-cols-2 gap-2">
-                        <button onclick="openBookingModal('Kintamani Volcano & Ubud Tour', 'Rp 650.000', 'whatsapp')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all shadow-md shadow-emerald-600/20 flex items-center justify-center gap-1.5">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> <span data-i18n="btn-wa">WhatsApp</span>
+                        <button onclick="openBookingModal('Kintamani Volcano & Ubud Tour', 'Rp 650.000', 'whatsapp')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
                         </button>
-                        <button onclick="openBookingModal('Kintamani Volcano & Ubud Tour', 'Rp 650.000', 'email')" class="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all shadow-md shadow-slate-900/20 flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-envelope text-xs"></i> <span data-i18n="btn-email">Email</span>
+                        <button onclick="openBookingModal('Kintamani Volcano & Ubud Tour', 'Rp 650.000', 'email')" class="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-envelope text-xs"></i> Email
                         </button>
                     </div>
                 </div>
             </div>
-
-            <!-- Tour 2 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between transition-all hover:-translate-y-1">
-                <div>
-                    <div class="relative h-60 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="East Bali Paradise Tour" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-800 shadow-md">
-                            <i class="fa-regular fa-clock text-emerald-600 mr-1"></i> <span data-i18n="tour-duration">10 Jam</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-xs font-semibold text-emerald-600 mb-2">
-                            <i class="fa-solid fa-location-dot"></i> Lempuyang - Tirta Gangga
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="t2-name">East Bali Paradise (Gates of Heaven)</h3>
-                        <p class="text-slate-600 text-sm mb-4" data-i18n="t2-desc">Kunjungi spot ikonik Pura Lempuyang dengan latar Gunung Agung, nikmati ketenangan Istana Air Tirta Gangga, dan air terjun tersembunyi.</p>
-                        
-                        <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-1">Mobil Privat ber-AC + BBM</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-2">Supir Profesional merangkap Guide</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-4">Air mineral selama perjalanan</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50">
-                    <div class="flex items-center justify-between mb-4 pt-4">
-                        <span class="text-[10px] uppercase text-slate-400 block font-semibold" data-i18n="price-start">Mulai Dari</span>
-                        <span class="text-lg font-black text-slate-900">Rp 700.000 <span class="text-xs font-normal text-slate-500" data-i18n="price-unit">/ mobil</span></span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button onclick="openBookingModal('East Bali Paradise (Gates of Heaven)', 'Rp 700.000', 'whatsapp')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all shadow-md shadow-emerald-600/20 flex items-center justify-center gap-1.5">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> <span data-i18n="btn-wa">WhatsApp</span>
-                        </button>
-                        <button onclick="openBookingModal('East Bali Paradise (Gates of Heaven)', 'Rp 700.000', 'email')" class="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all shadow-md shadow-slate-900/20 flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-envelope text-xs"></i> <span data-i18n="btn-email">Email</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tour 3 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between transition-all hover:-translate-y-1">
-                <div>
-                    <div class="relative h-60 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80" alt="North Bali Bedugul Sunset Tour" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-800 shadow-md">
-                            <i class="fa-regular fa-clock text-emerald-600 mr-1"></i> <span data-i18n="tour-duration">10 Jam</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-xs font-semibold text-emerald-600 mb-2">
-                            <i class="fa-solid fa-location-dot"></i> Bedugul - Handara - Tanah Lot
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="t3-name">North Bali Bedugul & Sunset Tour</h3>
-                        <p class="text-slate-600 text-sm mb-4" data-i18n="t3-desc">Eksplor keindahan Pura Ulun Danu Beratan di pinggir danau, berfoto di Handara Gate, dan ditutup dengan sunset menakjubkan di Pura Tanah Lot.</p>
-                        
-                        <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-1">Mobil Privat ber-AC + BBM</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-2">Supir Profesional merangkap Guide</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="t-inc-5">Biaya parkir & Tol</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50">
-                    <div class="flex items-center justify-between mb-4 pt-4">
-                        <span class="text-[10px] uppercase text-slate-400 block font-semibold" data-i18n="price-start">Mulai Dari</span>
-                        <span class="text-lg font-black text-slate-900">Rp 650.000 <span class="text-xs font-normal text-slate-500" data-i18n="price-unit">/ mobil</span></span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button onclick="openBookingModal('North Bali Bedugul & Sunset Tour', 'Rp 650.000', 'whatsapp')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all shadow-md shadow-emerald-600/20 flex items-center justify-center gap-1.5">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> <span data-i18n="btn-wa">WhatsApp</span>
-                        </button>
-                        <button onclick="openBookingModal('North Bali Bedugul & Sunset Tour', 'Rp 650.000', 'email')" class="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-2.5 px-2 rounded-xl text-xs transition-all shadow-md shadow-slate-900/20 flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-envelope text-xs"></i> <span data-i18n="btn-email">Email</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Custom Tour Section -->
     <section id="custom" class="py-20 bg-emerald-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1920&q=80')"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <span class="bg-emerald-800 text-emerald-300 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-700" data-i18n="cust-tag">Fleksibel & Personal</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold mt-4 mb-4" data-i18n="cust-title">Punya Rencana Sendiri? Rancang Custom Tour Anda!</h2>
                     <p class="text-emerald-100 text-base leading-relaxed mb-6 font-light" data-i18n="cust-desc">
-                        Ingin mengunjungi tempat-tempat tertentu di Bali sesuai keinginan keluarga atau pasangan Anda? Cukup isi form di samping, tentukan destinasi impian Anda, dan kirimkan langsung via WhatsApp atau Email untuk mendapatkan kalkulasi harga dari tim kami.
+                        Ingin mengunjungi tempat-tempat tertentu di Bali sesuai keinginan keluarga atau pasangan Anda? Cukup isi form di samping, tentukan destinasi impian Anda, dan kirimkan langsung via WhatsApp atau Email.
                     </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-emerald-800 flex items-center justify-center text-emerald-300 font-bold text-sm">1</div>
-                            <p class="text-sm text-slate-200" data-i18n="cust-step-1">Isi detail tanggal, jumlah peserta, dan destinasi pilihan.</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-emerald-800 flex items-center justify-center text-emerald-300 font-bold text-sm">2</div>
-                            <p class="text-sm text-slate-200" data-i18n="cust-step-2">Pilih kirim via WhatsApp atau Email sesuai kenyamanan Anda.</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-emerald-800 flex items-center justify-center text-emerald-300 font-bold text-sm">3</div>
-                            <p class="text-sm text-slate-200" data-i18n="cust-step-3">Dapatkan saran rute efisien & penawaran harga terbaik!</p>
-                        </div>
-                    </div>
                 </div>
-
-                <!-- Custom Tour Form Card -->
                 <div class="bg-white text-slate-800 rounded-3xl p-8 shadow-2xl border border-slate-100">
                     <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-paper-plane text-emerald-600"></i> <span data-i18n="form-title">Form Custom Tour Builder</span>
+                        <i class="fa-solid fa-paper-plane text-emerald-600"></i> Form Custom Tour Builder
                     </h3>
                     <form id="custom-form" class="space-y-4">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="form-date">Tanggal Rencana Tur</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tanggal Rencana Tur</label>
                             <input type="date" id="c-date" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-600">
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="form-pax">Jumlah Peserta</label>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Jumlah Peserta</label>
                                 <input type="text" id="c-pax" placeholder="Contoh: 4 Orang" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-600">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="form-duration">Durasi / Tipe</label>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Durasi / Tipe</label>
                                 <select id="c-duration" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-600">
-                                    <option value="10 Jam (Full Day)" data-i18n="opt-full">10 Jam (Full Day)</option>
-                                    <option value="Half Day (6 Jam)" data-i18n="opt-half">Half Day (6 Jam)</option>
-                                    <option value="Multi-Day Tour" data-i18n="opt-multi">Multi-Day Tour</option>
+                                    <option value="10 Jam (Full Day)">10 Jam (Full Day)</option>
+                                    <option value="Half Day (6 Jam)">Half Day (6 Jam)</option>
+                                    <option value="Multi-Day Tour">Multi-Day Tour</option>
                                 </select>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="form-hotel">Hotel / Lokasi Jemput</label>
-                            <input type="text" id="c-hotel" placeholder="Nama Hotel & Area (Misal: Ubud / Kuta)" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-600">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Hotel / Lokasi Jemput</label>
+                            <input type="text" id="c-hotel" placeholder="Nama Hotel & Area" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-600">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="form-dest">Destinasi / Keinginan Khusus</label>
-                            <textarea id="c-destinations" rows="3" placeholder="Sebutkan tempat yang ingin dikunjungi atau aktivitas khusus..." required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-600"></textarea>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Destinasi / Keinginan Khusus</label>
+                            <textarea id="c-destinations" rows="3" placeholder="Sebutkan tempat yang ingin dikunjungi..." required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-600"></textarea>
                         </div>
-                        
                         <div class="grid grid-cols-2 gap-3 pt-2">
-                            <button type="button" onclick="submitCustomTour('whatsapp')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-3 rounded-xl text-xs transition-all shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-1.5">
-                                <i class="fa-brands fa-whatsapp text-base"></i> <span data-i18n="form-btn-wa">Kirim via WA</span>
+                            <button type="button" onclick="submitCustomTour('whatsapp')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-3 rounded-xl text-xs transition-all shadow-lg flex items-center justify-center gap-1.5">
+                                <i class="fa-brands fa-whatsapp text-base"></i> Kirim via WA
                             </button>
-                            <button type="button" onclick="submitCustomTour('email')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-3 rounded-xl text-xs transition-all shadow-lg shadow-slate-900/30 flex items-center justify-center gap-1.5">
-                                <i class="fa-solid fa-envelope text-sm"></i> <span data-i18n="form-btn-email">Kirim via Email</span>
+                            <button type="button" onclick="submitCustomTour('email')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-3 rounded-xl text-xs transition-all shadow-lg flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-envelope text-sm"></i> Kirim via Email
                             </button>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100" data-i18n="blog-tag">Travel Guide & Tips</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3" data-i18n="blog-title">Blog & Inspirasi Liburan di Bali</h2>
-            <p class="text-slate-600 mt-2 text-base" data-i18n="blog-desc">Temukan informasi terbaru, rekomendasi tempat tersembunyi, dan tips seputar wisata privat di Bali.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Article 1 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
-                <div>
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Sewa Mobil Bali" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block mb-2" data-i18n="b1-cat">Tips & Trik</span>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="b1-title">Keuntungan Menggunakan Private Car Dibanding Sewa Lepas Kunci di Bali</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="b1-desc">Kenapa menyewa mobil dengan supir lokal berpengalaman jauh lebih efisien dan bebas stres dibandingkan menyetir sendiri di jalanan Bali yang padat?</p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-[11px] text-slate-400">12 Mar 2026</span>
-                    <a href="#contact" class="text-emerald-600 font-semibold text-xs hover:underline flex items-center gap-1" data-i18n="b-read">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                </div>
-            </div>
-
-            <!-- Article 2 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
-                <div>
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=600&q=80" alt="Kintamani Sunrise" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block mb-2" data-i18n="b2-cat">Itinerary Tur</span>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="b2-title">Panduan Lengkap Menikmati Sunrise di Kintamani & Agrowisata Kopi</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="b2-desc">Rekomendasi waktu terbaik untuk berangkat dari hotel, spot foto terbaik menghadap kaldera Gunung Batur, serta mampir ke perkebunan kopi lokal.</p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-[11px] text-slate-400">05 Mar 2026</span>
-                    <a href="#contact" class="text-emerald-600 font-semibold text-xs hover:underline flex items-center gap-1" data-i18n="b-read">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                </div>
-            </div>
-
-            <!-- Article 3 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
-                <div>
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80" alt="Bali Family Tour" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block mb-2" data-i18n="b3-cat">Custom Trip</span>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="b3-title">Cara Merencanakan Custom Itinerary Liburan Bersama Keluarga</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="b3-desc">Tips menyusun rute perjalanan lintas kabupaten di Bali tanpa membuat anak-anak kelelahan di dalam kendaraan.</p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-[11px] text-slate-400">28 Feb 2026</span>
-                    <a href="#contact" class="text-emerald-600 font-semibold text-xs hover:underline flex items-center gap-1" data-i18n="b-read">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="relative">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=800&q=80" alt="Pura Bali" class="w-full h-[400px] object-cover">
-                </div>
-                <div class="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-6 rounded-2xl shadow-xl hidden sm:block">
-                    <span class="block text-3xl font-extrabold" data-i18n="about-years">5+ Tahun</span>
-                    <span class="text-xs font-medium text-emerald-100" data-i18n="about-exp">Pengalaman Melayani Wisatawan</span>
-                </div>
-            </div>
-            <div>
-                <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100" data-i18n="about-tag">Tentang BaliDayTour</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4" data-i18n="about-title">Sahabat Setia Liburan Anda di Pulau Dewata</h2>
-                <p class="text-slate-600 text-base leading-relaxed mb-6 font-light" data-i18n="about-desc">
-                    BaliDayTour hadir untuk memberikan kenyamanan dan keamanan penuh bagi Anda yang ingin menjelajahi keindahan Bali tanpa ribet. Dengan armada mobil terawat, supir lokal berpengalaman yang ramah, serta sistem pemesanan inquiry via WhatsApp dan Email yang transparan, kami siap mewujudkan liburan impian Anda.
-                </p>
-                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-100">
-                    <div>
-                        <h4 class="text-2xl font-black text-slate-900">1,500+</h4>
-                        <p class="text-xs text-slate-500 font-medium" data-i18n="stat-1">Wisatawan Puas</p>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-black text-slate-900">100%</h4>
-                        <p class="text-xs text-slate-500 font-medium" data-i18n="stat-2">Privasi & Fleksibilitas</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -536,364 +295,77 @@
                         </div>
                         <span class="text-xl font-black tracking-tight text-white">BaliDay<span class="text-emerald-500">Tour</span></span>
                     </div>
-                    <p class="text-slate-400 text-sm font-light leading-relaxed mb-4" data-i18n="footer-desc">
-                        Penyedia layanan tur privat dan custom tour profesional di Bali dengan pemesanan langsung melalui WhatsApp dan Email untuk pelayanan yang cepat dan personal.
+                    <p class="text-slate-400 text-sm font-light leading-relaxed mb-4">
+                        Penyedia layanan tur privat dan custom tour profesional di Bali dengan pemesanan langsung melalui WhatsApp dan Email.
                     </p>
-                    <div class="flex items-center gap-3">
-                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-emerald-600 hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-emerald-600 hover:text-white transition-all"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-emerald-600 hover:text-white transition-all"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
                 </div>
-
                 <div>
-                    <h4 class="font-bold text-base mb-4 text-white" data-i18n="footer-contact">Kontak Cepat</h4>
+                    <h4 class="font-bold text-base mb-4 text-white">Kontak Cepat</h4>
                     <ul class="space-y-3 text-sm text-slate-400">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot text-emerald-500 mt-1"></i>
-                            <span>Jl. Raya Ubud No. 88, Gianyar, Bali, Indonesia</span>
+                            <span id="footer-address">Jl. Raya Ubud No. 88, Gianyar, Bali, Indonesia</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-brands fa-whatsapp text-emerald-500"></i>
-                            <span>+62 812-3456-7890</span>
+                            <span id="footer-phone">+62 812-3456-7890</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-emerald-500"></i>
-                            <span>booking@balidaytour.com</span>
+                            <span id="footer-email">booking@balidaytour.com</span>
                         </li>
                     </ul>
                 </div>
-
                 <div>
-                    <h4 class="font-bold text-base mb-4 text-white" data-i18n="footer-hours">Jam Operasional</h4>
-                    <p class="text-slate-400 text-sm font-light mb-4" data-i18n="footer-hours-desc">Layanan customer service dan konsultasi tour online kami buka setiap hari:</p>
+                    <h4 class="font-bold text-base mb-4 text-white">Jam Operasional</h4>
                     <div class="bg-slate-800 p-4 rounded-xl text-sm border border-slate-700">
                         <div class="flex justify-between font-semibold mb-1">
-                            <span data-i18n="footer-days">Senin - Minggu:</span>
-                            <span class="text-emerald-400">08.00 - 21.00 WITA</span>
+                            <span>Senin - Minggu:</span>
+                            <span id="footer-hours" class="text-emerald-400">08.00 - 21.00 WITA</span>
                         </div>
-                        <p class="text-xs text-slate-400" data-i18n="footer-resp">Respon cepat via WhatsApp & Email.</p>
+                        <p class="text-xs text-slate-400">Respon cepat via WhatsApp & Email.</p>
                     </div>
                 </div>
             </div>
-
             <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
                 <p>&copy; 2026 BaliDayTour. Hak Cipta Dilindungi.</p>
-                <p class="mt-2 sm:mt-0" data-i18n="footer-sub">Dibuat khusus dengan sistem Inquiry WhatsApp & Email.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript & Multi-language Dictionary -->
+    <!-- JavaScript & Dynamic Data Integration -->
     <script>
-        const dict = {
-            id: {
-                "logo-sub": "Explore Bali Privately",
-                "nav-home": "Beranda",
-                "nav-tours": "Tur Seharian",
-                "nav-custom": "Custom Tur",
-                "nav-blog": "Blog",
-                "nav-about": "Tentang Kami",
-                "nav-contact": "Kontak",
-                "cta-chat": "Chat Admin",
-                "mob-lang": "Pilih Bahasa",
-                "hero-badge": "Trusted Private Tour in Bali",
-                "hero-title": "Jelajahi Pesona Bali Sesuai Gaya Anda",
-                "hero-desc": "Nikmati tur seharian privat yang fleksibel, mobil nyaman ber-AC, supir berpengalaman, dan pengalaman liburan tanpa repot. Booking langsung via WhatsApp atau Email!",
-                "hero-btn-tours": "Lihat Paket Tur",
-                "hero-btn-custom": "Rancang Custom Tour",
-                "feat-1-title": "100% Private Car",
-                "feat-1-desc": "Tidak digabung grup lain",
-                "feat-2-title": "Supir Profesional",
-                "feat-2-desc": "Ramah & berpengalaman",
-                "feat-3-title": "Tanpa Biaya Tersembunyi",
-                "feat-3-desc": "Harga transparan & jujur",
-                "feat-4-title": "Booking Mudah",
-                "feat-4-desc": "Via WhatsApp atau Email",
-                "tours-tag": "Pilihan Terpopuler",
-                "tours-title": "Paket Tur Seharian di Bali",
-                "tours-desc": "Rute terbaik yang dikurasi khusus untuk memberikan pengalaman liburan tak terlupakan dalam waktu 8-10 jam.",
-                "tour-duration": "10 Jam",
-                "t1-name": "Kintamani Volcano & Ubud Cultural Tour",
-                "t1-desc": "Saksikan pemandangan megah Gunung Batur, jelajahi terasering sawah Tegalalang, mampir ke agrowisata kopi, dan belanja di Pasar Seni Ubud.",
-                "t2-name": "East Bali Paradise (Gates of Heaven)",
-                "t2-desc": "Kunjungi spot ikonik Pura Lempuyang dengan latar Gunung Agung, nikmati ketenangan Istana Air Tirta Gangga, dan air terjun tersembunyi.",
-                "t3-name": "North Bali Bedugul & Sunset Tour",
-                "t3-desc": "Eksplor keindahan Pura Ulun Danu Beratan di pinggir danau, berfoto di Handara Gate, dan ditutup dengan sunset menakjubkan di Pura Tanah Lot.",
-                "t-inc-1": "Mobil Privat ber-AC + BBM",
-                "t-inc-2": "Supir Profesional merangkap Guide",
-                "t-inc-3": "Tiket Masuk Objek Wisata Utama",
-                "t-inc-4": "Air mineral selama perjalanan",
-                "t-inc-5": "Biaya parkir & Tol",
-                "price-start": "Mulai Dari",
-                "price-unit": "/ mobil",
-                "btn-wa": "WhatsApp",
-                "btn-email": "Email",
-                "modal-tag": "Formulir Pemesanan",
-                "modal-sub": "Estimasi Harga:",
-                "form-name": "Nama Lengkap",
-                "form-date": "Tanggal Rencana Tur",
-                "form-pax": "Jumlah Peserta",
-                "form-hotel": "Hotel / Lokasi Penjemputan",
-                "form-notes": "Catatan Tambahan (Opsional)",
-                "modal-btn-send": "Kirim Pesanan Sekarang",
-                "cust-tag": "Fleksibel & Personal",
-                "cust-title": "Punya Rencana Sendiri? Rancang Custom Tour Anda!",
-                "cust-desc": "Ingin mengunjungi tempat-tempat tertentu di Bali sesuai keinginan keluarga atau pasangan Anda? Cukup isi form di samping, tentukan destinasi impian Anda, dan kirimkan langsung via WhatsApp atau Email untuk mendapatkan kalkulasi harga dari tim kami.",
-                "cust-step-1": "Isi detail tanggal, jumlah peserta, dan destinasi pilihan.",
-                "cust-step-2": "Pilih kirim via WhatsApp atau Email sesuai kenyamanan Anda.",
-                "cust-step-3": "Dapatkan saran rute efisien & penawaran harga terbaik!",
-                "form-title": "Form Custom Tour Builder",
-                "form-duration": "Durasi / Tipe",
-                "opt-full": "10 Jam (Full Day)",
-                "opt-half": "Half Day (6 Jam)",
-                "opt-multi": "Multi-Day Tour",
-                "form-dest": "Destinasi / Keinginan Khusus",
-                "form-btn-wa": "Kirim via WA",
-                "form-btn-email": "Kirim via Email",
-                "blog-tag": "Travel Guide & Tips",
-                "blog-title": "Blog & Inspirasi Liburan di Bali",
-                "blog-desc": "Temukan informasi terbaru, rekomendasi tempat tersembunyi, dan tips seputar wisata privat di Bali.",
-                "b1-cat": "Tips & Trik",
-                "b1-title": "Keuntungan Menggunakan Private Car Dibanding Sewa Lepas Kunci di Bali",
-                "b1-desc": "Kenapa menyewa mobil dengan supir lokal berpengalaman jauh lebih efisien dan bebas stres dibandingkan menyetir sendiri di jalanan Bali yang padat?",
-                "b2-cat": "Itinerary Tur",
-                "b2-title": "Panduan Lengkap Menikmati Sunrise di Kintamani & Agrowisata Kopi",
-                "b2-desc": "Rekomendasi waktu terbaik untuk berangkat dari hotel, spot foto terbaik menghadap kaldera Gunung Batur, serta mampir ke perkebunan kopi lokal.",
-                "b3-cat": "Custom Trip",
-                "b3-title": "Cara Merencanakan Custom Itinerary Liburan Bersama Keluarga",
-                "b3-desc": "Tips menyusun rute perjalanan lintas kabupaten di Bali tanpa membuat anak-anak kelelahan di dalam kendaraan.",
-                "b-read": "Baca Selengkapnya",
-                "about-tag": "Tentang BaliDayTour",
-                "about-title": "Sahabat Setia Liburan Anda di Pulau Dewata",
-                "about-desc": "BaliDayTour hadir untuk memberikan kenyamanan dan keamanan penuh bagi Anda yang ingin menjelajahi keindahan Bali tanpa ribet. Dengan armada mobil terawat, supir lokal berpengalaman yang ramah, serta sistem pemesanan inquiry via WhatsApp dan Email yang transparan, kami siap mewujudkan liburan impian Anda.",
-                "about-years": "5+ Tahun",
-                "about-exp": "Pengalaman Melayani Wisatawan",
-                "stat-1": "Wisatawan Puas",
-                "stat-2": "Privasi & Fleksibilitas",
-                "footer-desc": "Penyedia layanan tur privat dan custom tour profesional di Bali dengan pemesanan langsung melalui WhatsApp dan Email untuk pelayanan yang cepat dan personal.",
-                "footer-contact": "Kontak Cepat",
-                "footer-hours": "Jam Operasional",
-                "footer-hours-desc": "Layanan customer service dan konsultasi tour online kami buka setiap hari:",
-                "footer-days": "Senin - Minggu:",
-                "footer-resp": "Respon cepat via WhatsApp & Email.",
-                "footer-sub": "Dibuat khusus dengan sistem Inquiry WhatsApp & Email."
-            },
-            en: {
-                "logo-sub": "Explore Bali Privately",
-                "nav-home": "Home",
-                "nav-tours": "Full-Day Tours",
-                "nav-custom": "Custom Tour",
-                "nav-blog": "Blog",
-                "nav-about": "About Us",
-                "nav-contact": "Contact",
-                "cta-chat": "Chat Admin",
-                "mob-lang": "Select Language",
-                "hero-badge": "Trusted Private Tour in Bali",
-                "hero-title": "Explore Bali's Charm Your Own Way",
-                "hero-desc": "Enjoy a flexible private full-day tour with comfortable AC cars, experienced drivers, and a hassle-free holiday experience. Book directly via WhatsApp or Email!",
-                "hero-btn-tours": "View Tour Packages",
-                "hero-btn-custom": "Build Custom Tour",
-                "feat-1-title": "100% Private Car",
-                "feat-1-desc": "Not shared with other groups",
-                "feat-2-title": "Professional Driver",
-                "feat-2-desc": "Friendly & experienced",
-                "feat-3-title": "No Hidden Fees",
-                "feat-3-desc": "Transparent & honest pricing",
-                "feat-4-title": "Easy Booking",
-                "feat-4-desc": "Via WhatsApp or Email",
-                "tours-tag": "Most Popular",
-                "tours-title": "Full-Day Tour Packages in Bali",
-                "tours-desc": "Curated best routes designed to give you an unforgettable holiday experience within 8-10 hours.",
-                "tour-duration": "10 Hours",
-                "t1-name": "Kintamani Volcano & Ubud Cultural Tour",
-                "t1-desc": "Witness the majestic Mount Batur view, explore Tegalalang rice terraces, visit coffee agrotourism, and shop at Ubud Art Market.",
-                "t2-name": "East Bali Paradise (Gates of Heaven)",
-                "t2-desc": "Visit iconic Lempuyang Temple with Mount Agung backdrop, enjoy Tirta Gangga Water Palace, and hidden waterfalls.",
-                "t3-name": "North Bali Bedugul & Sunset Tour",
-                "t3-desc": "Explore Ulun Danu Beratan Temple by the lake, take photos at Handara Gate, and finish with a breathtaking sunset at Tanah Lot Temple.",
-                "t-inc-1": "Private AC Car + Fuel",
-                "t-inc-2": "Professional Driver cum Guide",
-                "t-inc-3": "Main Attraction Entrance Tickets",
-                "t-inc-4": "Mineral water during trip",
-                "t-inc-5": "Parking & Toll fees",
-                "price-start": "Starts From",
-                "price-unit": "/ car",
-                "btn-wa": "WhatsApp",
-                "btn-email": "Email",
-                "modal-tag": "Booking Form",
-                "modal-sub": "Estimated Price:",
-                "form-name": "Full Name",
-                "form-date": "Planned Tour Date",
-                "form-pax": "Number of Participants",
-                "form-hotel": "Hotel / Pickup Location",
-                "form-notes": "Additional Notes (Optional)",
-                "modal-btn-send": "Send Booking Now",
-                "cust-tag": "Flexible & Personal",
-                "cust-title": "Have Your Own Plan? Design Your Custom Tour!",
-                "cust-desc": "Want to visit specific places in Bali according to your family or partner's wishes? Simply fill out the form, set your dream destinations, and send it directly via WhatsApp or Email.",
-                "cust-step-1": "Fill in dates, number of participants, and destinations.",
-                "cust-step-2": "Choose to send via WhatsApp or Email as you prefer.",
-                "cust-step-3": "Get efficient route suggestions & best pricing offers!",
-                "form-title": "Custom Tour Builder Form",
-                "form-duration": "Duration / Type",
-                "opt-full": "10 Hours (Full Day)",
-                "opt-half": "Half Day (6 Hours)",
-                "opt-multi": "Multi-Day Tour",
-                "form-dest": "Destinations / Special Requests",
-                "form-btn-wa": "Send via WA",
-                "form-btn-email": "Send via Email",
-                "blog-tag": "Travel Guide & Tips",
-                "blog-title": "Blog & Bali Holiday Inspiration",
-                "blog-desc": "Discover the latest info, hidden gem recommendations, and private tour tips in Bali.",
-                "b1-cat": "Tips & Tricks",
-                "b1-title": "Advantages of Using a Private Car vs Self-Drive in Bali",
-                "b1-desc": "Why renting a car with an experienced local driver is much more efficient and stress-free than driving yourself in Bali's busy traffic?",
-                "b2-cat": "Tour Itinerary",
-                "b2-title": "Complete Guide to Enjoying Kintamani Sunrise & Coffee Agrotourism",
-                "b2-desc": "Best departure times, photo spots overlooking Mount Batur caldera, and visiting local coffee plantations.",
-                "b3-cat": "Custom Trip",
-                "b3-title": "How to Plan a Custom Family Holiday Itinerary",
-                "b3-desc": "Tips on arranging cross-regency travel routes in Bali without tiring out children in the vehicle.",
-                "b-read": "Read More",
-                "about-tag": "About BaliDayTour",
-                "about-title": "Your Trusted Holiday Companion in the Island of Gods",
-                "about-desc": "BaliDayTour provides full comfort and safety for exploring Bali effortlessly. With well-maintained cars, friendly local drivers, and transparent WhatsApp & Email inquiry booking, we bring your dream holiday to life.",
-                "about-years": "5+ Years",
-                "about-exp": "Serving Travelers",
-                "stat-1": "Satisfied Travelers",
-                "stat-2": "Privacy & Flexibility",
-                "footer-desc": "Professional private tour and custom tour provider in Bali with direct WhatsApp and Email booking for fast and personal service.",
-                "footer-contact": "Quick Contact",
-                "footer-hours": "Operating Hours",
-                "footer-hours-desc": "Our online customer service and tour consultation are open daily:",
-                "footer-days": "Monday - Sunday:",
-                "footer-resp": "Fast response via WhatsApp & Email.",
-                "footer-sub": "Created specifically with WhatsApp & Email Inquiry system."
-            },
-            ko: {
-                "logo-sub": "Explore Bali Privately",
-                "nav-home": "홈",
-                "nav-tours": "일일 투어",
-                "nav-custom": "맞춤 투어",
-                "nav-blog": "블로그",
-                "nav-about": "회사소개",
-                "nav-contact": "연락처",
-                "cta-chat": "상담하기",
-                "mob-lang": "언어 선택",
-                "hero-badge": "Trusted Private Tour in Bali",
-                "hero-title": "나만의 스타일로 발리의 매력을 즐기세요",
-                "hero-desc": "편안한 에어컨 차량, 숙련된 기사와 함께하는 유연한 프라이빗 일일 투어. 왓츠앱 또는 이메일로 바로 예약하세요!",
-                "hero-btn-tours": "투어 패키지 보기",
-                "hero-btn-custom": "맞춤 투어 만들기",
-                "feat-1-title": "100% 단독 차량",
-                "feat-1-desc": "다른 그룹과 합류하지 않음",
-                "feat-2-title": "전문 기사 동행",
-                "feat-2-desc": "친절하고 경험 많은 기사",
-                "feat-3-title": "숨겨진 비용 없음",
-                "feat-3-desc": "투명하고 정직한 가격",
-                "feat-4-title": "간편한 예약",
-                "feat-4-desc": "왓츠앱 또는 이메일 문의",
-                "tours-tag": "인기 상품",
-                "tours-title": "발리 일일 투어 패키지",
-                "tours-desc": "8~10시간 동안 잊지 못할 발리 여행을 선사하기 위해 엄선된 베스트 코스입니다.",
-                "tour-duration": "10시간",
-                "t1-name": "킨타마니 화산 & 우두 문화 투어",
-                "t1-desc": "바투르 산의 웅장한 전망을 감상하고, 테갈랄랑 라이스 테라스와 커피 농장을 방문하며 우두 아트 마켓을 둘러보세요.",
-                "t2-name": "동발리 파라다이스 (천국의 문)",
-                "t2-desc": "아공산을 배경으로 한 렘푸양 사원, 띠르따 강가 워터팰리스, 숨겨진 폭포를 방문하세요.",
-                "t3-name": "북발리 브두굴 & 선셋 투어",
-                "t3-desc": "호숫가의 울룬 다누 브라탄 사원, 한다라 게이트에서 사진을 찍고 따나롯 사원에서 멋진 노을을 감상하세요.",
-                "t-inc-1": "프라이빗 에어컨 차량 + 유류비",
-                "t-inc-2": "전문 운전기사 겸 가이드",
-                "t-inc-3": "주요 관광지 입장권 포함",
-                "t-inc-4": "투어 중 생수 제공",
-                "t-inc-5": "주차비 및 톨비 포함",
-                "price-start": "시작 가격",
-                "price-unit": "/ 차량 1대",
-                "btn-wa": "왓츠앱",
-                "btn-email": "이메일",
-                "modal-tag": "예약 양식",
-                "modal-sub": "예상 가격:",
-                "form-name": "성함",
-                "form-date": "희망 투어 일자",
-                "form-pax": "참가 인원",
-                "form-hotel": "호텔 / 픽업 장소",
-                "form-notes": "추가 요청사항 (선택)",
-                "modal-btn-send": "지금 예약 전송",
-                "cust-tag": "유연한 맞춤형",
-                "cust-title": "원하는 일정표가 있으신가요? 맞춤 투어를 설계하세요!",
-                "cust-desc": "가족이나 연인과 함께 가고 싶은 장소가 따로 있으신가요? 양식을 작성하고 왓츠앱 또는 이메일로 보내주시면 견적을 확인해 드립니다.",
-                "cust-step-1": "날짜, 인원수, 원하는 목적지를 입력하세요.",
-                "cust-step-2": "편하신 대로 왓츠앱 또는 이메일 전송을 선택하세요.",
-                "cust-step-3": "효율적인 동선 추천과 최적의 가격을 받아보세요!",
-                "form-title": "맞춤 투어 신청서",
-                "form-duration": "소요 시간 / 유형",
-                "opt-full": "10시간 (전일 투어)",
-                "opt-half": "반나절 (6시간)",
-                "opt-multi": "다중 일자 투어",
-                "form-dest": "가고 싶은 곳 / 특별 요청사항",
-                "form-btn-wa": "왓츠앱 전송",
-                "form-btn-email": "이메일 전송",
-                "blog-tag": "여행 가이드 & 팁",
-                "blog-title": "발리 여행 블로그 및 영감",
-                "blog-desc": "발리의 최신 정보, 숨은 명소 추천, 프라이빗 투어 꿀팁을 확인하세요.",
-                "b1-cat": "꿀팁",
-                "b1-title": "발리에서 렌터카 자가운전보다 프라이빗 기사 차량을 이용해야 하는 이유",
-                "b1-desc": "복잡한 발리 도로에서 직접 운전하는 것보다 경험 많은 현지 기사와 함께하는 것이 왜 훨씬 효율적이고 스트레스가 없는지 확인하세요.",
-                "b2-cat": "투어 코스",
-                "b2-title": "킨타마니 일출 & 커피 농장 투어 완벽 가이드",
-                "b2-desc": "호텔 출발 최적의 시간, 바투르 칼데라가 보이는 인생샷 명소, 현지 커피 농장 방문 코스.",
-                "b3-cat": "맞춤 여행",
-                "b3-title": "아이와 함께하는 가족 맞춤형 발리 일정 짜는 법",
-                "b3-desc": "아이들이 지치지 않고 편안하게 발리 여러 지역을 둘러볼 수 있는 동선 짜기 노하우.",
-                "b-read": "자세히 보기",
-                "about-tag": "발리데이투어 소개",
-                "about-title": "신들의 섬에서 만나는 믿음직한 여행 파트너",
-                "about-desc": "발리데이투어는 복잡함 없이 편안하고 안전하게 발리를 여행할 수 있도록 돕습니다. 철저히 관리되는 차량, 친절한 현지 기사, 간편한 왓츠앱 및 이메일 예약 시스템으로 완벽한 여행을 만들어드립니다.",
-                "about-years": "5년 이상",
-                "about-exp": "여행자 서비스 경력",
-                "stat-1": "만족한 여행자",
-                "stat-2": "프라이버시 & 유연성",
-                "footer-desc": "발리의 전문 프라이빗 및 맞춤 투어 제공 업체. 왓츠앱과 이메일을 통한 다이렉트 예약으로 빠르고 친절한 서비스를 제공합니다.",
-                "footer-contact": "빠른 연락처",
-                "footer-hours": "운영 시간",
-                "footer-hours-desc": "온라인 고객 센터 및 투어 상담은 매일 운영됩니다:",
-                "footer-days": "월요일 - 일요일:",
-                "footer-resp": "왓츠앱 및 이메일로 빠른 답변을 드립니다.",
-                "footer-sub": "왓츠앱 및 이메일 문의 시스템 기반으로 제작되었습니다."
-            }
+        // Variabel global kontak default (bisa diubah dari CMS)
+        let siteConfig = {
+            whatsapp: "6281234567890",
+            email: "booking@balidaytour.com",
+            address: "Jl. Raya Ubud No. 88, Gianyar, Bali, Indonesia",
+            hours: "08.00 - 21.00 WITA"
         };
 
-        let currentLang = 'id';
+        // Fungsi memuat data pengaturan dari CMS (settings.json) jika ada
+        async function loadSiteSettings() {
+            try {
+                const response = await fetch('content/settings.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.whatsapp) siteConfig.whatsapp = data.whatsapp;
+                    if (data.email) siteConfig.email = data.email;
+                    if (data.address) siteConfig.address = data.address;
+                    if (data.hours) siteConfig.hours = data.hours;
 
-        function changeLanguage(lang) {
-            currentLang = lang;
-            document.getElementById('lang-select').value = lang;
-            document.getElementById('lang-select-mob').value = lang;
-            
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (dict[lang][key]) {
-                    el.innerText = dict[lang][key];
+                    // Perbarui tampilan kontak di footer & tombol WA
+                    document.getElementById('footer-address').innerText = siteConfig.address;
+                    document.getElementById('footer-phone').innerText = '+' + siteConfig.whatsapp.replace(/(\d{2})(\d{3})(\d{4})(\d{4})/, '$1 $2-$3-$4');
+                    document.getElementById('footer-email').innerText = siteConfig.email;
+                    document.getElementById('footer-hours').innerText = siteConfig.hours;
                 }
-            });
+            } catch (e) {
+                console.log('Menggunakan data kontak default.');
+            }
         }
 
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        window.addEventListener('DOMContentLoaded', loadSiteSettings);
 
         function showToast(message) {
             const toast = document.getElementById('toast');
@@ -912,16 +384,6 @@
 
             document.getElementById('modal-tour-title').innerText = tourName;
             document.getElementById('modal-tour-price').innerText = price;
-
-            const submitBtn = document.getElementById('modal-submit-btn');
-            if (type === 'whatsapp') {
-                submitBtn.className = "w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2";
-                submitBtn.innerHTML = `<i class="fa-brands fa-whatsapp text-lg"></i> <span>${currentLang === 'id' ? 'Kirim via WhatsApp' : (currentLang === 'ko' ? '왓츠앱으로 예약 전송' : 'Send via WhatsApp')}</span>`;
-            } else {
-                submitBtn.className = "w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-slate-900/30 flex items-center justify-center gap-2";
-                submitBtn.innerHTML = `<i class="fa-solid fa-envelope text-lg"></i> <span>${currentLang === 'id' ? 'Kirim via Email' : (currentLang === 'ko' ? '이메일로 예약 전송' : 'Send via Email')}</span>`;
-            }
-
             document.getElementById('booking-modal').classList.remove('hidden');
         }
 
@@ -931,7 +393,6 @@
 
         function submitTourBooking(event) {
             event.preventDefault();
-
             const tourName = document.getElementById('m-tour-name').value;
             const price = document.getElementById('m-tour-price-val').value;
             const type = document.getElementById('m-inquiry-type').value;
@@ -942,32 +403,19 @@
             const hotel = document.getElementById('m-hotel').value;
             const notes = document.getElementById('m-notes').value;
 
-            const phoneNumber = '6281234567890';
-            const emailAddress = 'booking@balidaytour.com';
-
-            let message = '';
-            if (currentLang === 'id') {
-                message = `Halo BaliDayTour, saya ingin memesan tur berikut:\n\n- Nama Paket: ${tourName}\n- Estimasi Harga: ${price}\n- Nama Pemesan: ${name}\n- Tanggal Tur: ${date}\n- Jumlah Peserta: ${pax}\n- Hotel / Lokasi Jemput: ${hotel}\n- Catatan: ${notes || '-'}\n\nMohon konfirmasi ketersediaannya. Terima kasih!`;
-            } else if (currentLang === 'ko') {
-                message = `안녕하세요 발리데이투어, 다음 투어를 예약하고 싶습니다:\n\n- 투어 상품: ${tourName}\n- 예상 가격: ${price}\n- 예약자 성함: ${name}\n- 투어 일자: ${date}\n- 참가 인원: ${pax}\n- 호텔/픽업 장소: ${hotel}\n- 요청사항: ${notes || '-'}\n\n예약 가능 여부 확인 부탁드립니다. 감사합니다!`;
-            } else {
-                message = `Hello BaliDayTour, I would like to book the following tour:\n\n- Tour Package: ${tourName}\n- Estimated Price: ${price}\n- Customer Name: ${name}\n- Tour Date: ${date}\n- Number of Participants: ${pax}\n- Pickup Location (Hotel): ${hotel}\n- Notes: ${notes || '-'}\n\nPlease check availability. Thank you!`;
-            }
+            let message = `Halo BaliDayTour, saya ingin memesan tur berikut:\n\n- Nama Paket: ${tourName}\n- Estimasi Harga: ${price}\n- Nama Pemesan: ${name}\n- Tanggal Tur: ${date}\n- Jumlah Peserta: ${pax}\n- Hotel / Lokasi Jemput: ${hotel}\n- Catatan: ${notes || '-'}\n\nMohon konfirmasi ketersediaannya. Terima kasih!`;
 
             closeBookingModal();
 
             if (type === 'whatsapp') {
-                showToast(currentLang === 'id' ? 'Mengarahkan ke WhatsApp...' : (currentLang === 'ko' ? '왓츠앱으로 연결 중...' : 'Redirecting to WhatsApp...'));
-                const encodedMessage = encodeURIComponent(message);
+                showToast('Mengarahkan ke WhatsApp...');
                 setTimeout(() => {
-                    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+                    window.open(`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
                 }, 600);
             } else {
-                showToast(currentLang === 'id' ? 'Membuka klien Email...' : (currentLang === 'ko' ? '이메일 클라이언트를 여는 중...' : 'Opening Email client...'));
-                const subject = encodeURIComponent(`Tour Booking: ${tourName} (${name})`);
-                const body = encodeURIComponent(message);
+                showToast('Membuka klien Email...');
                 setTimeout(() => {
-                    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+                    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent('Tour Booking: ' + tourName)}&body=${encodeURIComponent(message)}`;
                 }, 600);
             }
         }
@@ -980,34 +428,21 @@
             const destinations = document.getElementById('c-destinations').value;
 
             if (!date || !pax || !hotel || !destinations) {
-                alert(currentLang === 'id' ? 'Mohon lengkapi semua data formulir terlebih dahulu.' : (currentLang === 'ko' ? '모든 양식 항목을 채워주세요.' : 'Please fill out all form fields.'));
+                alert('Mohon lengkapi semua data formulir terlebih dahulu.');
                 return;
             }
 
-            const phoneNumber = '6281234567890';
-            const emailAddress = 'booking@balidaytour.com';
-            let message = '';
+            let message = `Halo BaliDayTour, saya ingin merancang *Custom Tour* di Bali dengan detail berikut:\n\n- Tanggal Tur: ${date}\n- Jumlah Peserta: ${pax}\n- Durasi/Tipe: ${duration}\n- Lokasi Jemput: ${hotel}\n- Destinasi:\n${destinations}\n\nMohon bantu buatkan rute dan penawaran harganya. Terima kasih!`;
 
-            if (currentLang === 'id') {
-                message = `Halo BaliDayTour, saya ingin merancang *Custom Tour* di Bali dengan detail berikut:\n\n- Tanggal Tur: ${date}\n- Jumlah Peserta: ${pax}\n- Durasi/Tipe: ${duration}\n- Lokasi Jemput (Hotel): ${hotel}\n- Destinasi / Permintaan Khusus:\n${destinations}\n\nMohon bantu buatkan rute dan penawaran harganya. Terima kasih!`;
-            } else if (currentLang === 'ko') {
-                message = `안녕하세요 발리데이투어, 맞춤 투어(Custom Tour) 견적을 요청합니다:\n\n- 투어 일자: ${date}\n- 참가 인원: ${pax}\n- 소요 시간/유형: ${duration}\n- 호텔/픽업 장소: ${hotel}\n- 가고 싶은 장소 / 요청사항:\n${destinations}\n\n맞춤 일정 및 견적 부탁드립니다. 감사합니다!`;
-            } else {
-                message = `Hello BaliDayTour, I would like to design a *Custom Tour* in Bali with the following details:\n\n- Tour Date: ${date}\n- Number of Participants: ${pax}\n- Duration/Type: ${duration}\n- Pickup Location (Hotel): ${hotel}\n- Destinations / Special Requests:\n${destinations}\n\nPlease help me with the itinerary and pricing offer. Thank you!`;
-            }
-            
             if (type === 'whatsapp') {
-                showToast(currentLang === 'id' ? 'Mengarahkan ke WhatsApp...' : (currentLang === 'ko' ? '왓츠앱으로 연결 중...' : 'Redirecting to WhatsApp...'));
-                const encodedMessage = encodeURIComponent(message);
+                showToast('Mengarahkan ke WhatsApp...');
                 setTimeout(() => {
-                    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+                    window.open(`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
                 }, 600);
             } else {
-                showToast(currentLang === 'id' ? 'Membuka klien Email...' : (currentLang === 'ko' ? '이메일 클라이언트를 여는 중...' : 'Opening Email client...'));
-                const subject = encodeURIComponent(`Custom Tour Inquiry - ${date} (${pax})`);
-                const body = encodeURIComponent(message);
+                showToast('Membuka klien Email...');
                 setTimeout(() => {
-                    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+                    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent('Custom Tour Inquiry')}&body=${encodeURIComponent(message)}`;
                 }, 600);
             }
         }
