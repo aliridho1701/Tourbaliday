@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BaliDayTour - Jelajahi Keindahan Bali Bersama Kami</title>
+    <title id="page-title">BaliDayTour - Jelajahi Keindahan Bali Bersama Kami</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -41,22 +41,28 @@
                 </div>
                 <div class="flex flex-col">
                     <span class="text-2xl font-black tracking-tight text-slate-900">BaliDay<span class="text-emerald-600">Tour</span></span>
-                    <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold -mt-1">Explore Bali Privately</span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold -mt-1" data-i18n="logo-sub">Explore Bali Privately</span>
                 </div>
             </a>
 
             <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600">
-                <a href="index.html" class="text-emerald-600 font-bold transition-colors">Beranda</a>
-                <a href="tours.html" class="hover:text-emerald-600 transition-colors">Tur Seharian</a>
-                <a href="custom.html" class="hover:text-emerald-600 transition-colors">Custom Tur</a>
-                <a href="blog.html" class="hover:text-emerald-600 transition-colors">Blog</a>
-                <a href="about.html" class="hover:text-emerald-600 transition-colors">Tentang Kami</a>
-                <a href="contact.html" class="hover:text-emerald-600 transition-colors">Kontak</a>
+                <a href="index.html" class="text-emerald-600 font-bold transition-colors" data-i18n="nav-home">Beranda</a>
+                <a href="tours.html" class="hover:text-emerald-600 transition-colors" data-i18n="nav-tours">Tur Seharian</a>
+                <a href="custom.html" class="hover:text-emerald-600 transition-colors" data-i18n="nav-custom">Custom Tur</a>
+                <a href="blog.html" class="hover:text-emerald-600 transition-colors" data-i18n="nav-blog">Blog</a>
+                <a href="about.html" class="hover:text-emerald-600 transition-colors" data-i18n="nav-about">Tentang Kami</a>
+                <a href="contact.html" class="hover:text-emerald-600 transition-colors" data-i18n="nav-contact">Kontak</a>
             </nav>
 
+            <!-- Language Selector & CTA -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="https://wa.me/6281234567890" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> Chat Admin
+                <select id="lang-select" class="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-2.5 py-2 focus:outline-none focus:border-emerald-600 cursor-pointer">
+                    <option value="id">🇮🇩 ID</option>
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="ko">🇰🇷 KO</option>
+                </select>
+                <a href="https://wa.me/6281234567890" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition-all shadow-lg flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="cta-chat">Chat Admin</span>
                 </a>
             </div>
 
@@ -65,40 +71,45 @@
             </button>
         </div>
 
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 px-6 py-5 space-y-4 shadow-xl">
-            <a href="index.html" class="block font-medium text-emerald-600 py-1">Beranda</a>
-            <a href="tours.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1">Tur Seharian</a>
-            <a href="custom.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1">Custom Tur</a>
-            <a href="blog.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1">Blog</a>
-            <a href="about.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1">Tentang Kami</a>
-            <a href="contact.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1">Kontak</a>
+            <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <span class="text-xs font-bold text-slate-400 uppercase" data-i18n="mob-lang">Pilih Bahasa</span>
+                <select id="lang-select-mob" class="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-2 py-1.5 focus:outline-none">
+                    <option value="id">🇮🇩 Indonesia</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                </select>
+            </div>
+            <a href="index.html" class="block font-medium text-emerald-600 py-1" data-i18n="nav-home">Beranda</a>
+            <a href="tours.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1" data-i18n="nav-tours">Tur Seharian</a>
+            <a href="custom.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1" data-i18n="nav-custom">Custom Tur</a>
+            <a href="blog.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1" data-i18n="nav-blog">Blog</a>
+            <a href="about.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1" data-i18n="nav-about">Tentang Kami</a>
+            <a href="contact.html" class="block font-medium text-slate-700 hover:text-emerald-600 py-1" data-i18n="nav-contact">Kontak</a>
         </div>
     </header>
 
-    <!-- Hero Section (Dinamis dari Admin / Bersih jika kosong) -->
+    <!-- Hero Section -->
     <section class="relative pt-20 pb-28 md:py-36 overflow-hidden bg-slate-900 text-white text-center">
         <div class="absolute inset-0 opacity-40 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1920&q=80')"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
             <div id="hero-container">
-                <!-- Status Kosong Default jika belum diatur lewat admin -->
                 <div class="max-w-2xl mx-auto py-10">
-                    <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-6">
-                        <i class="fa-solid fa-star text-[10px]"></i> Selamat Datang di BaliDayTour
+                    <span id="hero-badge" class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-6" data-i18n="hero-badge">
+                        <i class="fa-solid fa-star text-[10px]"></i> Trusted Private Tour in Bali
                     </span>
-                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4">
-                        Atur Konten Beranda Melalui Panel Admin
+                    <h1 id="hero-title" class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4" data-i18n="hero-title">
+                        Jelajahi Pesona Bali Sesuai Gaya Anda
                     </h1>
-                    <p class="text-slate-300 text-sm mb-8 font-light">
-                        Belum ada konfigurasi teks beranda yang diatur. Silakan masuk ke menu <span class="text-emerald-400 font-bold">Pengaturan Beranda</span> di panel admin untuk mulai mengubah teks banner ini.
+                    <p id="hero-desc" class="text-slate-300 text-sm mb-8 font-light" data-i18n="hero-desc">
+                        Nikmati tur seharian privat yang fleksibel, mobil nyaman ber-AC, supir berpengalaman, dan pengalaman liburan tanpa repot.
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="tours.html" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg">
+                        <a href="tours.html" id="hero-btn1" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg" data-i18n="hero-btn1">
                             Lihat Paket Tur
-                        </a>
-                        <a href="admin/" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-6 py-3.5 rounded-xl text-sm border border-white/20 transition-all">
-                            Buka Panel Admin
                         </a>
                     </div>
                 </div>
@@ -114,8 +125,8 @@
                     <i class="fa-solid fa-car"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-sm text-slate-900">100% Private Car</h3>
-                    <p class="text-xs text-slate-500">Tidak digabung grup lain</p>
+                    <h3 class="font-bold text-sm text-slate-900" data-i18n="feat-1-title">100% Private Car</h3>
+                    <p class="text-xs text-slate-500" data-i18n="feat-1-desc">Tidak digabung grup lain</p>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
@@ -123,8 +134,8 @@
                     <i class="fa-solid fa-user-shield"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-sm text-slate-900">Supir Profesional</h3>
-                    <p class="text-xs text-slate-500">Ramah & berpengalaman</p>
+                    <h3 class="font-bold text-sm text-slate-900" data-i18n="feat-2-title">Supir Profesional</h3>
+                    <p class="text-xs text-slate-500" data-i18n="feat-2-desc">Ramah & berpengalaman</p>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
@@ -132,8 +143,8 @@
                     <i class="fa-solid fa-hand-holding-dollar"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-sm text-slate-900">Tanpa Biaya Tersembunyi</h3>
-                    <p class="text-xs text-slate-500">Harga transparan & jujur</p>
+                    <h3 class="font-bold text-sm text-slate-900" data-i18n="feat-3-title">Tanpa Biaya Tersembunyi</h3>
+                    <p class="text-xs text-slate-500" data-i18n="feat-3-desc">Harga transparan & jujur</p>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
@@ -141,8 +152,8 @@
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-sm text-slate-900">Booking Mudah</h3>
-                    <p class="text-xs text-slate-500">Via WhatsApp & Email</p>
+                    <h3 class="font-bold text-sm text-slate-900" data-i18n="feat-4-title">Booking Mudah</h3>
+                    <p class="text-xs text-slate-500" data-i18n="feat-4-desc">Via WhatsApp & Email</p>
                 </div>
             </div>
         </div>
@@ -159,12 +170,12 @@
                         </div>
                         <span class="text-xl font-black tracking-tight text-white">BaliDay<span class="text-emerald-500">Tour</span></span>
                     </div>
-                    <p class="text-slate-400 text-sm font-light leading-relaxed mb-4">
+                    <p class="text-slate-400 text-sm font-light leading-relaxed mb-4" data-i18n="footer-desc">
                         Penyedia layanan tur privat dan custom tour profesional di Bali dengan pemesanan langsung melalui WhatsApp dan Email.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-base mb-4 text-white">Kontak Cepat</h4>
+                    <h4 class="font-bold text-base mb-4 text-white" data-i18n="footer-contact">Kontak Cepat</h4>
                     <ul class="space-y-3 text-sm text-slate-400">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot text-emerald-500 mt-1"></i>
@@ -187,13 +198,13 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-base mb-4 text-white">Jam Operasional</h4>
+                    <h4 class="font-bold text-base mb-4 text-white" data-i18n="footer-hours-title">Jam Operasional</h4>
                     <div class="bg-slate-800 p-4 rounded-xl text-sm border border-slate-700">
                         <div class="flex justify-between font-semibold mb-1">
-                            <span>Senin - Minggu:</span>
+                            <span data-i18n="footer-days">Senin - Minggu:</span>
                             <span id="footer-hours" class="text-emerald-400">08.00 - 21.00 WITA</span>
                         </div>
-                        <p class="text-xs text-slate-400">Respon cepat via WhatsApp & Email.</p>
+                        <p class="text-xs text-slate-400" data-i18n="footer-resp">Respon cepat via WhatsApp & Email.</p>
                     </div>
                 </div>
             </div>
@@ -203,8 +214,95 @@
         </div>
     </footer>
 
-    <!-- Script Dinamis Beranda & Footer -->
+    <!-- Script Bahasa & Dinamis -->
     <script>
+        const dict = {
+            id: {
+                "logo-sub": "Explore Bali Privately",
+                "nav-home": "Beranda",
+                "nav-tours": "Tur Seharian",
+                "nav-custom": "Custom Tur",
+                "nav-blog": "Blog",
+                "nav-about": "Tentang Kami",
+                "nav-contact": "Kontak",
+                "cta-chat": "Chat Admin",
+                "mob-lang": "Pilih Bahasa",
+                "hero-badge": "Trusted Private Tour in Bali",
+                "hero-title": "Jelajahi Pesona Bali Sesuai Gaya Anda",
+                "hero-desc": "Nikmati tur seharian privat yang fleksibel, mobil nyaman ber-AC, supir berpengalaman, dan pengalaman liburan tanpa repot.",
+                "hero-btn1": "Lihat Paket Tur",
+                "feat-1-title": "100% Private Car",
+                "feat-1-desc": "Tidak digabung grup lain",
+                "feat-2-title": "Supir Profesional",
+                "feat-2-desc": "Ramah & berpengalaman",
+                "feat-3-title": "Tanpa Biaya Tersembunyi",
+                "feat-3-desc": "Harga transparan & jujur",
+                "feat-4-title": "Booking Mudah",
+                "feat-4-desc": "Via WhatsApp & Email",
+                "footer-desc": "Penyedia layanan tur privat dan custom tour profesional di Bali dengan pemesanan langsung melalui WhatsApp dan Email.",
+                "footer-contact": "Kontak Cepat",
+                "footer-hours-title": "Jam Operasional",
+                "footer-days": "Senin - Minggu:",
+                "footer-resp": "Respon cepat via WhatsApp & Email."
+            },
+            en: {
+                "logo-sub": "Explore Bali Privately",
+                "nav-home": "Home",
+                "nav-tours": "Full-Day Tours",
+                "nav-custom": "Custom Tour",
+                "nav-blog": "Blog",
+                "nav-about": "About Us",
+                "nav-contact": "Contact",
+                "cta-chat": "Chat Admin",
+                "mob-lang": "Select Language",
+                "hero-badge": "Trusted Private Tour in Bali",
+                "hero-title": "Explore Bali's Charm Your Own Way",
+                "hero-desc": "Enjoy a flexible private full-day tour with comfortable AC cars, experienced drivers, and a hassle-free holiday experience.",
+                "hero-btn1": "View Tour Packages",
+                "feat-1-title": "100% Private Car",
+                "feat-1-desc": "Not shared with other groups",
+                "feat-2-title": "Professional Driver",
+                "feat-2-desc": "Friendly & experienced",
+                "feat-3-title": "No Hidden Fees",
+                "feat-3-desc": "Transparent & honest pricing",
+                "feat-4-title": "Easy Booking",
+                "feat-4-desc": "Via WhatsApp & Email",
+                "footer-desc": "Professional private tour and custom tour provider in Bali with direct booking via WhatsApp and Email.",
+                "footer-contact": "Quick Contact",
+                "footer-hours-title": "Operational Hours",
+                "footer-days": "Monday - Sunday:",
+                "footer-resp": "Fast response via WhatsApp & Email."
+            },
+            ko: {
+                "logo-sub": "Explore Bali Privately",
+                "nav-home": "홈",
+                "nav-tours": "일일 투어",
+                "nav-custom": "맞춤 투어",
+                "nav-blog": "블로그",
+                "nav-about": "회사소개",
+                "nav-contact": "연락처",
+                "cta-chat": "상담하기",
+                "mob-lang": "언어 선택",
+                "hero-badge": "Trusted Private Tour in Bali",
+                "hero-title": "나만의 스타일로 발리의 매력을 즐기세요",
+                "hero-desc": "편안한 에어컨 차량, 숙련된 기사와 함께하는 유연한 프라이빗 일일 투어.",
+                "hero-btn1": "투어 패키지 보기",
+                "feat-1-title": "100% 단독 차량",
+                "feat-1-desc": "다른 그룹과 합류하지 않음",
+                "feat-2-title": "전문 기사",
+                "feat-2-desc": "친절하고 숙련됨",
+                "feat-3-title": "숨겨진 비용 없음",
+                "feat-3-desc": "투명하고 정직한 가격",
+                "feat-4-title": "간편 예약",
+                "feat-4-desc": "WhatsApp 및 이메일 문의",
+                "footer-desc": "WhatsApp과 이메일을 통해 직접 예약하는 발리의 전문 프라이빗 투어 및 맞춤형 투어 제공업체입니다.",
+                "footer-contact": "빠른 연락처",
+                "footer-hours-title": "운영 시간",
+                "footer-days": "월요일 - 일요일:",
+                "footer-resp": "WhatsApp 및 이메일 빠른 응대."
+            }
+        };
+
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Mobile Menu Toggle
             const menuBtn = document.getElementById('menu-btn');
@@ -218,7 +316,30 @@
                 });
             }
 
-            // 2. Load Homepage Content from CMS (content/homepage.json)
+            // 2. Language Switcher Logic
+            const langSelect = document.getElementById('lang-select');
+            const langSelectMob = document.getElementById('lang-select-mob');
+
+            function applyLanguage(lang) {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[lang] && dict[lang][key]) {
+                        el.innerText = dict[lang][key];
+                    }
+                });
+                if (langSelect) langSelect.value = lang;
+                if (langSelectMob) langSelectMob.value = lang;
+            }
+
+            if (langSelect) {
+                langSelect.addEventListener('change', (e) => applyLanguage(e.target.value));
+            }
+            if (langSelectMob) {
+                langSelectMob.addEventListener('change', (e) => applyLanguage(e.target.value));
+            }
+
+            // 3. Load Homepage Content from CMS
             fetch('content/homepage.json')
                 .then(res => res.ok ? res.json() : null)
                 .then(data => {
@@ -245,9 +366,9 @@
                         `;
                     }
                 })
-                .catch(e => console.log('Belum ada pengaturan beranda dari CMS.'));
+                .catch(e => console.log('Menggunakan tampilan standar.'));
 
-            // 3. Load Footer Contact Settings
+            // 4. Load Footer Contact Settings
             fetch('content/settings.json')
                 .then(res => res.ok ? res.json() : null)
                 .then(data => {
