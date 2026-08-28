@@ -61,3 +61,16 @@ collections:
       - {label: "Rute / Lokasi", name: "location", widget: "string"}
       - {label: "Gambar Tur", name: "image", widget: "image"}
       - {label: "Deskripsi Singkat", name: "description", widget: "text"}
+
+      collections:
+  - name: "blog"
+    label: "Blog Artikel"
+    folder: "content/blog"
+    create: true
+    fields:
+      - {label: "Judul Artikel", name: "title", widget: "string"}
+      - {label: "Tanggal", name: "date", widget: "datetime"}
+      - {label: "Gambar Utama", name: "image", widget: "image"}
+      - {label: "Kategori", name: "category", widget: "string", default: "Tips & Trik"}
+      - {label: "Isi Konten", name: "body", widget: "markdown"}
+      
