@@ -83,86 +83,20 @@
             <p class="text-slate-600 mt-2 text-base">Temukan informasi terbaru, rekomendasi tempat tersembunyi, dan tips seputar wisata privat di Bali.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Article 1 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
-                <div>
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block mb-2">Tips & Trik</span>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Keuntungan Menggunakan Private Car Dibanding Sewa Lepas Kunci di Bali</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4">Kenapa menyewa mobil dengan supir lokal berpengalaman jauh lebih efisien dan bebas stres dibandingkan menyetir sendiri di jalanan Bali yang padat?</p>
-                    </div>
+        <!-- Container Artikel Blog Dinamis -->
+        <div id="blog-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Tampilan kosong secara default jika belum ada artikel dari admin -->
+            <div class="bg-white rounded-3xl p-12 text-center col-span-full border border-slate-100 shadow-sm">
+                <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                    <i class="fa-solid fa-newspaper"></i>
                 </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-[11px] text-slate-400">12 Mar 2026</span>
-                    <a href="contact.html" class="text-emerald-600 font-semibold text-xs hover:underline flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                </div>
-            </div>
-
-            <!-- Article 2 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
-                <div>
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block mb-2">Itinerary Tur</span>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Panduan Lengkap Menikmati Sunrise di Kintamani & Agrowisata Kopi</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4">Rekomendasi waktu terbaik untuk berangkat dari hotel, spot foto terbaik menghadap kaldera Gunung Batur, serta mampir ke perkebunan kopi lokal.</p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-[11px] text-slate-400">05 Mar 2026</span>
-                    <a href="contact.html" class="text-emerald-600 font-semibold text-xs hover:underline flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                </div>
-            </div>
-
-            <!-- Article 3 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between">
-                <div>
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block mb-2">Custom Trip</span>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Cara Merencanakan Custom Itinerary Liburan Bersama Keluarga</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4">Tips menyusun rute perjalanan lintas kabupaten di Bali tanpa membuat anak-anak kelelahan di dalam kendaraan.</p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-slate-100 mt-auto bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-[11px] text-slate-400">28 Feb 2026</span>
-                    <a href="contact.html" class="text-emerald-600 font-semibold text-xs hover:underline flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">Belum Ada Artikel Blog</h3>
+                <p class="text-slate-500 text-sm max-w-md mx-auto">Silakan tulis artikel pertama Anda melalui dashboard panel admin agar tampil di halaman ini.</p>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white pt-12 pb-10 border-t border-slate-800 text-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500">
-            <p>&copy; 2026 BaliDayTour. Hak Cipta Dilindungi.</p>
-        </div>
-    </footer>
-
-    <!-- Script Navbar -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    menuIcon.className = mobileMenu.classList.contains('hidden') ? "fa-solid fa-bars" : "fa-solid fa-xmark";
-                });
-            }
-        });
-    </script>
-        <!-- Footer Section Lengkap -->
+    <!-- Footer Section Lengkap -->
     <footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
@@ -182,20 +116,20 @@
                     <ul class="space-y-3 text-sm text-slate-400">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot text-emerald-500 mt-1"></i>
-                            <a href="https://maps.google.com/?q=Ubud,+Gianyar,+Bali" target="_blank" class="hover:text-emerald-400 underline transition-colors">
-                                Jl. Raya Ubud No. 88, Gianyar, Bali, Indonesia
+                            <a id="footer-address-link" href="https://maps.google.com/?q=Ubud,+Gianyar,+Bali" target="_blank" class="hover:text-emerald-400 underline transition-colors">
+                                <span id="footer-address">Jl. Raya Ubud No. 88, Gianyar, Bali, Indonesia</span>
                             </a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-brands fa-whatsapp text-emerald-500"></i>
-                            <a href="https://wa.me/6281234567890" target="_blank" class="hover:text-emerald-400 underline transition-colors">
-                                +62 812-3456-7890
+                            <a id="footer-phone-link" href="https://wa.me/6281234567890" target="_blank" class="hover:text-emerald-400 underline transition-colors">
+                                <span id="footer-phone">+62 812-3456-7890</span>
                             </a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-emerald-500"></i>
-                            <a href="mailto:booking@balidaytour.com" class="hover:text-emerald-400 underline transition-colors">
-                                booking@balidaytour.com
+                            <a id="footer-email-link" href="mailto:booking@balidaytour.com" class="hover:text-emerald-400 underline transition-colors">
+                                <span id="footer-email">booking@balidaytour.com</span>
                             </a>
                         </li>
                     </ul>
@@ -205,7 +139,7 @@
                     <div class="bg-slate-800 p-4 rounded-xl text-sm border border-slate-700">
                         <div class="flex justify-between font-semibold mb-1">
                             <span>Senin - Minggu:</span>
-                            <span class="text-emerald-400">08.00 - 21.00 WITA</span>
+                            <span id="footer-hours" class="text-emerald-400">08.00 - 21.00 WITA</span>
                         </div>
                         <p class="text-xs text-slate-400">Respon cepat via WhatsApp & Email.</p>
                     </div>
@@ -217,5 +151,43 @@
         </div>
     </footer>
 
+    <!-- Script Navbar & Footer Settings -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.className = mobileMenu.classList.contains('hidden') ? "fa-solid fa-bars" : "fa-solid fa-xmark";
+                });
+            }
+
+            // Load Footer Settings
+            fetch('content/settings.json')
+                .then(res => res.ok ? res.json() : null)
+                .then(data => {
+                    if (data) {
+                        if (data.whatsapp) {
+                            document.getElementById('footer-phone').innerText = '+' + data.whatsapp;
+                            document.getElementById('footer-phone-link').href = `https://wa.me/${data.whatsapp}`;
+                        }
+                        if (data.email) {
+                            document.getElementById('footer-email').innerText = data.email;
+                            document.getElementById('footer-email-link').href = `mailto:${data.email}`;
+                        }
+                        if (data.address) {
+                            document.getElementById('footer-address').innerText = data.address;
+                            document.getElementById('footer-address-link').href = `https://maps.google.com/?q=${encodeURIComponent(data.address)}`;
+                        }
+                        if (data.hours) {
+                            document.getElementById('footer-hours').innerText = data.hours;
+                        }
+                    }
+                }).catch(e => console.log('Menggunakan kontak default'));
+        });
+    </script>
 </body>
 </html>
