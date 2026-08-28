@@ -37,3 +37,15 @@ collections:
           - {label: "Alamat Email", name: "email", widget: "string"}
           - {label: "Alamat Kantor / Lokasi", name: "address", widget: "string"}
           - {label: "Jam Operasional", name: "hours", widget: "string"}
+  - name: "homepage"
+    label: "Pengaturan Beranda"
+    files:
+      - file: "content/homepage.json"
+        name: "home"
+        label: "Konten Beranda"
+        fields:
+          - {label: "Badge / Label Atas", name: "badge", widget: "string", default: "Trusted Private Tour in Bali"}
+          - {label: "Judul Utama (Heading)", name: "title", widget: "string", default: "Jelajahi Pesona Bali Sesuai Gaya Anda"}
+          - {label: "Deskripsi Singkat", name: "description", widget: "text", default: "Nikmati tur seharian privat yang fleksibel, mobil nyaman ber-AC, supir berpengalaman, dan pengalaman liburan tanpa repot."}
+          - {label: "Teks Tombol Kiri", name: "btnText1", widget: "string", default: "Lihat Paket Tur"}
+          - {label: "Teks Tombol Kanan", name: "btnText2", widget: "string", default: "Rancang Custom Tour"}
