@@ -3,103 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Villa Kayu Pererenan — Private Pool Villa 3 Kamar di Canggu, Bali</title>
-  <meta name="description" content="Villa 3 kamar tidur dengan kolam renang pribadi di Pererenan, Canggu. Untuk 6 tamu, 5 menit ke Pantai Pererenan. Booking langsung via WhatsApp.">
+  <title>Villa Kayu Pererenan — Private Pool Villa di Canggu, Bali</title>
+  <meta name="description" content="Tiga villa dengan kolam renang pribadi di Pererenan, Canggu. 5 menit ke pantai. Booking langsung via WhatsApp, tanpa biaya platform.">
   <meta property="og:title" content="Villa Kayu Pererenan — Private Pool Villa di Canggu">
-  <meta property="og:description" content="3 kamar tidur, 6 tamu, kolam renang pribadi, Wi-Fi 100 Mbps. 5 menit ke pantai.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80">
-  <meta name="theme-color" content="#2F4A3A">
+  <meta property="og:description" content="Tiga villa kolam pribadi di Pererenan, 5 menit dari pantai. Booking langsung ke pemilik.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80">
+  <meta name="theme-color" content="#111111">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            sand:   { 50: '#FBF8F3', 100: '#F5F0E8', 200: '#EAE1D3', 300: '#D9CBB5' },
-            ink:    { DEFAULT: '#1F2A24', soft: '#4A564F' },
-            forest: { DEFAULT: '#2F4A3A', dark: '#233829', light: '#E3EAE4' },
-            wood:   { DEFAULT: '#8A5A3B', light: '#F1E6DC' }
-          },
-          fontFamily: {
-            serif: ['Fraunces', 'Georgia', 'serif'],
-            sans:  ['Inter', 'system-ui', 'sans-serif']
+    if (window.tailwind) {
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink:   { DEFAULT: '#111111', soft: '#555555', mute: '#767676' },
+              panel: { DEFAULT: '#F4F4F2', line: '#E6E6E3' }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              sans:  ['Inter', 'system-ui', 'sans-serif']
+            },
+            letterSpacing: { eyebrow: '0.18em' }
           }
         }
-      }
+      };
     }
   </script>
   <style>
-    html { scroll-padding-top: 80px; }
+    html { scroll-padding-top: 72px; }
     body { -webkit-font-smoothing: antialiased; }
-    .img-fallback { background-color: #D9CBB5; }
-    #site-header.scrolled { background-color: rgba(251, 248, 243, 0.96); box-shadow: 0 1px 0 #EAE1D3; backdrop-filter: blur(8px); }
-    #site-header.scrolled .nav-link, #site-header.scrolled .brand, #site-header.scrolled #menu-btn { color: #1F2A24; }
+    .img-fallback { background-color: #D8D6D0; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+    #site-header.scrolled { background-color: rgba(17,17,17,.96); backdrop-filter: blur(8px); }
     .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
     .faq-panel.open { grid-template-rows: 1fr; }
     .faq-panel > div { overflow: hidden; }
     .faq-item[data-open="true"] .faq-icon { transform: rotate(45deg); }
     input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: .6; }
-    :focus-visible { outline: 2px solid #8A5A3B; outline-offset: 2px; }
+    :focus-visible { outline: 2px solid #111; outline-offset: 2px; }
+    .on-dark :focus-visible, .on-dark:focus-visible { outline-color: #fff; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; animation: none !important; }
     }
   </style>
 </head>
-<body class="bg-sand-50 text-ink font-sans leading-relaxed">
+<body class="bg-white text-ink font-sans leading-relaxed">
 
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-3 focus:rounded-md">Lewati ke konten</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-3">Lewati ke konten</a>
 
   <!-- ============ HEADER ============ -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300">
-    <nav class="mx-auto flex h-16 md:h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Navigasi utama">
-      <a href="#beranda" class="brand flex items-center gap-2 text-white min-h-[44px]">
-        <span class="font-serif text-xl md:text-2xl font-semibold tracking-tight">Villa Kayu</span>
-        <span class="hidden sm:inline text-xs uppercase tracking-[0.2em] opacity-80 pt-1">Pererenan</span>
-      </a>
+  <header id="site-header" class="on-dark fixed inset-x-0 top-0 z-50 bg-ink/0 transition-colors duration-300">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Navigasi utama">
+      <a href="#beranda" class="flex min-h-[44px] items-center font-serif text-xl font-medium text-white sm:text-2xl">Villa Kayu</a>
 
-      <ul class="hidden lg:flex items-center gap-1">
-        <li><a href="#tentang" class="nav-link inline-flex items-center min-h-[44px] px-3 text-sm font-medium text-white/90 hover:text-white">Tentang</a></li>
-        <li><a href="#fasilitas" class="nav-link inline-flex items-center min-h-[44px] px-3 text-sm font-medium text-white/90 hover:text-white">Fasilitas</a></li>
-        <li><a href="#galeri" class="nav-link inline-flex items-center min-h-[44px] px-3 text-sm font-medium text-white/90 hover:text-white">Galeri</a></li>
-        <li><a href="#booking" class="nav-link inline-flex items-center min-h-[44px] px-3 text-sm font-medium text-white/90 hover:text-white">Cek Tanggal</a></li>
-        <li><a href="#lokasi" class="nav-link inline-flex items-center min-h-[44px] px-3 text-sm font-medium text-white/90 hover:text-white">Lokasi</a></li>
-        <li><a href="#ulasan" class="nav-link inline-flex items-center min-h-[44px] px-3 text-sm font-medium text-white/90 hover:text-white">Ulasan</a></li>
-        <li><a href="#faq" class="nav-link inline-flex items-center min-h-[44px] px-3 text-sm font-medium text-white/90 hover:text-white">FAQ</a></li>
+      <ul class="hidden items-center gap-1 lg:flex">
+        <li><a href="#villa" class="inline-flex min-h-[44px] items-center px-3 text-[13px] font-medium text-white/85 hover:text-white">Villa</a></li>
+        <li><a href="#layanan" class="inline-flex min-h-[44px] items-center px-3 text-[13px] font-medium text-white/85 hover:text-white">Layanan</a></li>
+        <li><a href="#galeri" class="inline-flex min-h-[44px] items-center px-3 text-[13px] font-medium text-white/85 hover:text-white">Galeri</a></li>
+        <li><a href="#cerita" class="inline-flex min-h-[44px] items-center px-3 text-[13px] font-medium text-white/85 hover:text-white">Tentang</a></li>
+        <li><a href="#lokasi" class="inline-flex min-h-[44px] items-center px-3 text-[13px] font-medium text-white/85 hover:text-white">Lokasi</a></li>
+        <li><a href="#faq" class="inline-flex min-h-[44px] items-center px-3 text-[13px] font-medium text-white/85 hover:text-white">FAQ</a></li>
       </ul>
 
       <div class="flex items-center gap-2">
-        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tanya%20ketersediaan%20Villa%20Kayu%20Pererenan." target="_blank" rel="noopener"
-           class="hidden sm:inline-flex items-center gap-2 min-h-[44px] rounded-full bg-forest px-5 text-sm font-semibold text-white hover:bg-forest-dark transition-colors">
-          <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i> Book via WA
+        <a href="#booking" class="hidden min-h-[44px] items-center gap-2 bg-white px-5 text-[13px] font-semibold text-ink hover:bg-white/85 sm:inline-flex">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Book via WA
         </a>
-        <button id="menu-btn" type="button" class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-md text-white" aria-controls="mobile-menu" aria-expanded="false" aria-label="Buka menu">
-          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        <button id="menu-btn" type="button" class="inline-flex h-11 w-11 items-center justify-center text-white lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Buka menu">
+          <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
         </button>
       </div>
     </nav>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="lg:hidden hidden border-t border-sand-200 bg-sand-50">
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink lg:hidden">
       <ul class="mx-auto max-w-7xl px-4 py-2 sm:px-6">
-        <li><a href="#tentang" class="mobile-link flex items-center min-h-[48px] border-b border-sand-200 text-base font-medium text-ink">Tentang</a></li>
-        <li><a href="#fasilitas" class="mobile-link flex items-center min-h-[48px] border-b border-sand-200 text-base font-medium text-ink">Fasilitas</a></li>
-        <li><a href="#galeri" class="mobile-link flex items-center min-h-[48px] border-b border-sand-200 text-base font-medium text-ink">Galeri</a></li>
-        <li><a href="#booking" class="mobile-link flex items-center min-h-[48px] border-b border-sand-200 text-base font-medium text-ink">Cek Tanggal</a></li>
-        <li><a href="#lokasi" class="mobile-link flex items-center min-h-[48px] border-b border-sand-200 text-base font-medium text-ink">Lokasi</a></li>
-        <li><a href="#ulasan" class="mobile-link flex items-center min-h-[48px] border-b border-sand-200 text-base font-medium text-ink">Ulasan</a></li>
-        <li><a href="#faq" class="mobile-link flex items-center min-h-[48px] text-base font-medium text-ink">FAQ</a></li>
+        <li><a href="#villa" class="flex min-h-[48px] items-center border-b border-white/10 text-base text-white">Villa</a></li>
+        <li><a href="#layanan" class="flex min-h-[48px] items-center border-b border-white/10 text-base text-white">Layanan</a></li>
+        <li><a href="#galeri" class="flex min-h-[48px] items-center border-b border-white/10 text-base text-white">Galeri</a></li>
+        <li><a href="#cerita" class="flex min-h-[48px] items-center border-b border-white/10 text-base text-white">Tentang</a></li>
+        <li><a href="#lokasi" class="flex min-h-[48px] items-center border-b border-white/10 text-base text-white">Lokasi</a></li>
+        <li><a href="#faq" class="flex min-h-[48px] items-center text-base text-white">FAQ</a></li>
       </ul>
-      <div class="px-4 pb-4 sm:px-6">
-        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tanya%20ketersediaan%20Villa%20Kayu%20Pererenan." target="_blank" rel="noopener"
-           class="flex w-full items-center justify-center gap-2 min-h-[48px] rounded-full bg-forest text-base font-semibold text-white">
-          <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Book via WhatsApp
+      <div class="px-4 pb-5 sm:px-6">
+        <a href="#booking" class="flex min-h-[48px] w-full items-center justify-center gap-2 bg-white text-base font-semibold text-ink">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Book via WhatsApp
         </a>
       </div>
     </div>
@@ -108,438 +102,360 @@
   <main id="main">
 
     <!-- ============ HERO ============ -->
-    <section id="beranda" class="relative flex min-h-[100svh] items-end overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=2000&q=80"
-           srcset="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=75 800w,
-                   https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=80 1400w,
-                   https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=2400&q=80 2400w"
-           sizes="100vw"
-           alt="Kolam renang pribadi Villa Kayu dikelilingi taman tropis"
+    <section id="beranda" class="on-dark relative flex min-h-[100svh] items-end overflow-hidden bg-ink md:min-h-[720px] lg:min-h-[100svh]">
+      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=80"
+           srcset="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=75 800w,
+                   https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1400&q=80 1400w,
+                   https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2400&q=80 2400w"
+           sizes="100vw" alt="Villa Kayu saat senja dengan lampu menyala dan kolam di depannya"
            class="img-fallback absolute inset-0 h-full w-full object-cover" fetchpriority="high">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/30" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40" aria-hidden="true"></div>
 
-      <div class="relative mx-auto w-full max-w-7xl px-4 pb-8 pt-28 sm:px-6 md:pb-12 lg:px-8">
-        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-sand-200">Pererenan, Canggu — Bali</p>
-        <h1 class="max-w-3xl font-serif text-4xl font-medium leading-[1.1] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-          Rumah kayu dengan kolam sendiri, lima menit dari pantai.
+      <div class="relative mx-auto w-full max-w-7xl px-4 pb-8 pt-28 sm:px-6 md:pb-10 lg:px-8">
+        <p class="eyebrow text-white/80">Selamat datang di Villa Kayu</p>
+        <h1 class="mt-4 max-w-2xl font-serif text-[2.6rem] font-medium leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+          Tempat menginap yang berbeda dari biasanya.
         </h1>
-        <p class="mt-5 max-w-xl text-base text-white/90 sm:text-lg">
-          Tiga kamar tidur ber-AC, dapur lengkap, dan halaman tertutup untuk keluarga atau rombongan kecil. Pesan langsung ke pemilik, tanpa biaya platform.
+        <p class="mt-5 max-w-md text-[15px] text-white/85 sm:text-base">
+          Tiga villa kolam pribadi di antara sawah Pererenan, lima menit dari pantai. Untuk tamu yang lebih suka tenang daripada ramai.
         </p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href="#booking" class="inline-flex items-center justify-center gap-2 min-h-[52px] rounded-full bg-forest px-7 text-base font-semibold text-white hover:bg-forest-dark transition-colors">
-            <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Booking via WhatsApp
-          </a>
-          <a href="#galeri" class="inline-flex items-center justify-center gap-2 min-h-[52px] rounded-full border border-white/70 px-7 text-base font-semibold text-white hover:bg-white hover:text-ink transition-colors">
-            Lihat Galeri
-          </a>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#villa" class="inline-flex min-h-[44px] items-center bg-white px-5 text-[13px] font-semibold text-ink hover:bg-white/85">Lihat Villa</a>
+          <a href="#galeri" class="inline-flex min-h-[44px] items-center border border-white/70 px-5 text-[13px] font-semibold text-white hover:bg-white hover:text-ink">Lihat Galeri</a>
         </div>
 
-        <!-- Quick specs bar -->
-        <dl class="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/20 text-white sm:grid-cols-4">
-          <div class="flex items-center gap-3 bg-black/35 px-4 py-4 backdrop-blur-sm">
-            <i class="fa-solid fa-bed w-5 text-center text-sand-200" aria-hidden="true"></i>
-            <div><dt class="sr-only">Kamar tidur</dt><dd class="text-sm font-medium sm:text-base">3 Kamar Tidur</dd></div>
-          </div>
-          <div class="flex items-center gap-3 bg-black/35 px-4 py-4 backdrop-blur-sm">
-            <i class="fa-solid fa-user-group w-5 text-center text-sand-200" aria-hidden="true"></i>
-            <div><dt class="sr-only">Kapasitas</dt><dd class="text-sm font-medium sm:text-base">Maks. 6 Tamu</dd></div>
-          </div>
-          <div class="flex items-center gap-3 bg-black/35 px-4 py-4 backdrop-blur-sm">
-            <i class="fa-solid fa-water-ladder w-5 text-center text-sand-200" aria-hidden="true"></i>
-            <div><dt class="sr-only">Kolam</dt><dd class="text-sm font-medium sm:text-base">Private Pool</dd></div>
-          </div>
-          <div class="flex items-center gap-3 bg-black/35 px-4 py-4 backdrop-blur-sm">
-            <i class="fa-solid fa-wifi w-5 text-center text-sand-200" aria-hidden="true"></i>
-            <div><dt class="sr-only">Internet</dt><dd class="text-sm font-medium sm:text-base">Wi-Fi 100 Mbps</dd></div>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ============ TENTANG ============ -->
-    <section id="tentang" class="py-20 md:py-28">
-      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-        <div class="order-2 lg:order-1">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-wood">Tentang Villa</p>
-          <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl lg:text-5xl">Dibangun dari kayu ulin dan batu alam, dirancang untuk tinggal lebih dari semalam.</h2>
-          <div class="mt-6 space-y-4 text-ink-soft text-base sm:text-lg">
-            <p>Villa Kayu berdiri di atas lahan 400 m² di jalan kecil Pererenan, jauh dari keramaian Canggu tapi tetap dekat ke mana-mana. Ruang tamu dan dapur dibuat terbuka menghadap kolam, jadi angin bisa lewat dan Anda jarang perlu menyalakan AC di siang hari.</p>
-            <p>Ketiga kamar tidur punya kamar mandi sendiri, kasur dengan topper lateks, dan tirai blackout. Staf kami datang setiap pagi untuk bersih-bersih dan siap membantu sewa motor, antar-jemput bandara, atau tukang pijat panggilan.</p>
-          </div>
-          <dl class="mt-8 grid grid-cols-3 gap-4 border-t border-sand-200 pt-8">
-            <div>
-              <dt class="text-sm text-ink-soft">Luas bangunan</dt>
-              <dd class="mt-1 font-serif text-2xl sm:text-3xl">220 m²</dd>
+        <div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-5">
+          <dl class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-white/85">
+            <div class="flex items-center gap-2">
+              <dt class="sr-only">Rating</dt>
+              <dd class="flex items-center gap-2"><span class="tracking-[0.15em] text-white" aria-hidden="true">★★★★★</span><span>4,9 dari 86 ulasan</span></dd>
             </div>
-            <div>
-              <dt class="text-sm text-ink-soft">Kolam renang</dt>
-              <dd class="mt-1 font-serif text-2xl sm:text-3xl">10 × 4 m</dd>
-            </div>
-            <div>
-              <dt class="text-sm text-ink-soft">Kamar mandi</dt>
-              <dd class="mt-1 font-serif text-2xl sm:text-3xl">3 en-suite</dd>
-            </div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-water-ladder" aria-hidden="true"></i><dt class="sr-only">Kolam</dt><dd>Private pool</dd></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-user-group" aria-hidden="true"></i><dt class="sr-only">Kapasitas</dt><dd>2–6 tamu</dd></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-wifi" aria-hidden="true"></i><dt class="sr-only">Internet</dt><dd>Wi-Fi 100 Mbps</dd></div>
           </dl>
-        </div>
-        <div class="order-1 grid grid-cols-5 gap-3 sm:gap-4 lg:order-2">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
-               alt="Ruang tamu terbuka dengan sofa dan langit-langit kayu" loading="lazy"
-               class="img-fallback col-span-3 h-72 w-full rounded-2xl object-cover sm:h-96">
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=700&q=80"
-               alt="Kamar tidur utama dengan kasur king size" loading="lazy"
-               class="img-fallback col-span-2 mt-10 h-60 w-full rounded-2xl object-cover sm:h-80">
+          <a href="#booking" class="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-white px-5 text-[13px] font-semibold text-ink hover:bg-white/85">
+            Cek Tanggal <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ FASILITAS ============ -->
-    <section id="fasilitas" class="bg-sand-100 py-20 md:py-28">
+    <!-- ============ VILLA LIST ============ -->
+    <section id="villa" class="py-16 md:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-wood">Fasilitas</p>
-          <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Semua yang perlu ada, sudah ada.</h2>
-          <p class="mt-4 text-ink-soft text-base sm:text-lg">Datang bawa koper saja. Handuk, perlengkapan mandi, air minum galon, dan bumbu dapur dasar sudah kami siapkan.</p>
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="eyebrow text-ink-mute">Villa &amp; Kamar</p>
+            <h2 class="mt-3 font-serif text-3xl font-medium sm:text-4xl">Pilih villa Anda.</h2>
+          </div>
+          <a href="#booking" class="inline-flex min-h-[44px] w-fit items-center border border-ink px-4 text-[13px] font-semibold hover:bg-ink hover:text-white">Cek Ketersediaan</a>
         </div>
 
-        <ul class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <li class="flex gap-4 rounded-2xl border border-sand-200 bg-white p-6">
-            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-forest-light text-forest"><i class="fa-solid fa-water-ladder text-lg" aria-hidden="true"></i></span>
-            <div>
-              <h3 class="font-semibold text-lg">Private Swimming Pool</h3>
-              <p class="mt-1 text-sm text-ink-soft">Kolam 10 × 4 m, kedalaman 1,2–1,6 m, dibersihkan setiap hari. Ada 4 kursi santai.</p>
-            </div>
+        <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-3">
+          <li>
+            <article class="flex h-full flex-col bg-panel">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=75" alt="Villa Kamboja, villa satu lantai dengan teras kayu" loading="lazy" class="img-fallback aspect-[4/3] w-full object-cover">
+              <div class="p-5">
+                <p class="eyebrow text-ink-mute">Villa · 1 kamar</p>
+                <h3 class="mt-2 text-[15px] font-semibold">Villa Kamboja</h3>
+                <p class="mt-1 text-sm text-ink-soft">Mulai <span class="font-semibold text-ink">Rp 1.400.000</span> <span class="text-ink-mute">/ malam</span></p>
+                <p class="mt-3 text-sm text-ink-soft">Untuk pasangan. King bed, kolam 6 × 3 m, dapur kecil.</p>
+              </div>
+            </article>
           </li>
-          <li class="flex gap-4 rounded-2xl border border-sand-200 bg-white p-6">
-            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-forest-light text-forest"><i class="fa-solid fa-bed text-lg" aria-hidden="true"></i></span>
-            <div>
-              <h3 class="font-semibold text-lg">King Bed</h3>
-              <p class="mt-1 text-sm text-ink-soft">Kamar utama king size, dua kamar lain bisa queen atau twin sesuai permintaan.</p>
-            </div>
+          <li>
+            <article class="flex h-full flex-col bg-panel">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=75" alt="Villa Jepun, villa dua lantai dengan dinding kaca" loading="lazy" class="img-fallback aspect-[4/3] w-full object-cover">
+              <div class="p-5">
+                <p class="eyebrow text-ink-mute">Villa · 2 kamar</p>
+                <h3 class="mt-2 text-[15px] font-semibold">Villa Jepun</h3>
+                <p class="mt-1 text-sm text-ink-soft">Mulai <span class="font-semibold text-ink">Rp 2.300.000</span> <span class="text-ink-mute">/ malam</span></p>
+                <p class="mt-3 text-sm text-ink-soft">Untuk 4 tamu. Dua kamar en-suite, ruang kerja, kolam 8 × 3 m.</p>
+              </div>
+            </article>
           </li>
-          <li class="flex gap-4 rounded-2xl border border-sand-200 bg-white p-6">
-            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-forest-light text-forest"><i class="fa-solid fa-kitchen-set text-lg" aria-hidden="true"></i></span>
-            <div>
-              <h3 class="font-semibold text-lg">Fully-Equipped Kitchen</h3>
-              <p class="mt-1 text-sm text-ink-soft">Kompor 4 tungku, oven, kulkas besar, mesin kopi, rice cooker, dan alat makan untuk 8 orang.</p>
-            </div>
-          </li>
-          <li class="flex gap-4 rounded-2xl border border-sand-200 bg-white p-6">
-            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-forest-light text-forest"><i class="fa-solid fa-tv text-lg" aria-hidden="true"></i></span>
-            <div>
-              <h3 class="font-semibold text-lg">Smart TV &amp; Netflix</h3>
-              <p class="mt-1 text-sm text-ink-soft">TV 55 inci di ruang tamu dengan akun Netflix dan YouTube Premium yang sudah login.</p>
-            </div>
-          </li>
-          <li class="flex gap-4 rounded-2xl border border-sand-200 bg-white p-6">
-            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-forest-light text-forest"><i class="fa-solid fa-car text-lg" aria-hidden="true"></i></span>
-            <div>
-              <h3 class="font-semibold text-lg">Car Park</h3>
-              <p class="mt-1 text-sm text-ink-soft">Parkir di dalam pagar untuk 1 mobil dan 3 motor. Gerbang dikunci di malam hari.</p>
-            </div>
-          </li>
-          <li class="flex gap-4 rounded-2xl border border-sand-200 bg-white p-6">
-            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-forest-light text-forest"><i class="fa-solid fa-fire-burner text-lg" aria-hidden="true"></i></span>
-            <div>
-              <h3 class="font-semibold text-lg">BBQ Set</h3>
-              <p class="mt-1 text-sm text-ink-soft">Panggangan arang di samping kolam. Arang dan pemantik bisa kami siapkan dengan tambahan biaya kecil.</p>
-            </div>
+          <li class="sm:col-span-2 lg:col-span-1">
+            <article class="flex h-full flex-col bg-panel">
+              <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=75" alt="Villa Kayu, villa tiga kamar dengan kolam besar dan taman" loading="lazy" class="img-fallback aspect-[4/3] w-full object-cover sm:aspect-[16/7] lg:aspect-[4/3]">
+              <div class="p-5">
+                <p class="eyebrow text-ink-mute">Villa · 3 kamar</p>
+                <h3 class="mt-2 text-[15px] font-semibold">Villa Kayu</h3>
+                <p class="mt-1 text-sm text-ink-soft">Mulai <span class="font-semibold text-ink">Rp 3.200.000</span> <span class="text-ink-mute">/ malam</span></p>
+                <p class="mt-3 text-sm text-ink-soft">Untuk keluarga, maks. 6 tamu. Kolam 10 × 4 m, dapur lengkap, BBQ.</p>
+              </div>
+            </article>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ GALERI ============ -->
-    <section id="galeri" class="py-20 md:py-28">
+    <!-- ============ SERVICES ============ -->
+    <section id="layanan" class="pb-16 md:pb-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div class="max-w-2xl">
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-wood">Galeri</p>
-            <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Lihat setiap sudutnya.</h2>
-          </div>
-          <p class="text-sm text-ink-soft">Ketuk foto untuk memperbesar.</p>
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80" alt="Ruang tamu terbuka dengan langit-langit kayu dan taman dalam" loading="lazy" class="img-fallback aspect-[16/10] w-full object-cover sm:aspect-[16/7]">
+        <div class="bg-panel px-5 py-12 sm:px-10 md:py-16">
+          <p class="eyebrow text-ink-mute">Layanan Villa</p>
+          <h2 class="mt-3 max-w-md font-serif text-3xl font-medium sm:text-4xl">Semua yang perlu ada, sudah ada.</h2>
+          <ol class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="bg-white p-6">
+              <span class="font-serif text-2xl">01</span>
+              <h3 class="mt-4 text-[15px] font-semibold">Sarapan &amp; Dapur</h3>
+              <p class="mt-2 text-sm text-ink-soft">Sarapan dimasak staf setiap pagi (Rp 75.000/orang). Dapur lengkap untuk masak sendiri.</p>
+            </li>
+            <li class="bg-white p-6">
+              <span class="font-serif text-2xl">02</span>
+              <h3 class="mt-4 text-[15px] font-semibold">Parkir &amp; Antar-jemput</h3>
+              <p class="mt-2 text-sm text-ink-soft">Parkir di dalam pagar untuk mobil dan motor. Jemputan bandara Rp 350.000 sekali jalan.</p>
+            </li>
+            <li class="bg-white p-6">
+              <span class="font-serif text-2xl">03</span>
+              <h3 class="mt-4 text-[15px] font-semibold">Laundry &amp; Kebersihan</h3>
+              <p class="mt-2 text-sm text-ink-soft">Bersih-bersih harian dan ganti handuk. Laundry kiloan diambil pagi, kembali sore.</p>
+            </li>
+            <li class="bg-white p-6">
+              <span class="font-serif text-2xl">04</span>
+              <h3 class="mt-4 text-[15px] font-semibold">Pijat &amp; Sewa Motor</h3>
+              <p class="mt-2 text-sm text-ink-soft">Terapis pijat datang ke villa. Sewa motor bisa diantar di hari kedatangan.</p>
+            </li>
+          </ol>
         </div>
+      </div>
+    </section>
 
-        <div id="gallery" class="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:grid-rows-2">
-          <button type="button" class="gallery-item group relative col-span-2 row-span-2 overflow-hidden rounded-2xl img-fallback aspect-[4/3] md:aspect-auto"
-                  data-full="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Kolam renang dan taman">
-            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=75" alt="Kolam renang dan taman" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+    <!-- ============ GALLERY ============ -->
+    <section id="galeri" class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="eyebrow text-ink-mute">Galeri</p>
+            <h2 class="mt-3 font-serif text-3xl font-medium sm:text-4xl">Lihat setiap sudutnya.</h2>
+          </div>
+          <p class="text-sm text-ink-mute">Ketuk foto untuk memperbesar.</p>
+        </div>
+        <div class="mt-10 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+          <button type="button" class="gallery-item group img-fallback col-span-2 row-span-2 aspect-square overflow-hidden md:aspect-auto" data-full="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Kolam renang Villa Kayu">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=75" alt="Kolam renang Villa Kayu" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
           </button>
-          <button type="button" class="gallery-item group relative overflow-hidden rounded-2xl img-fallback aspect-square"
-                  data-full="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Ruang tamu">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=75" alt="Ruang tamu" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          </button>
-          <button type="button" class="gallery-item group relative overflow-hidden rounded-2xl img-fallback aspect-square"
-                  data-full="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Kamar tidur utama">
+          <button type="button" class="gallery-item group img-fallback aspect-square overflow-hidden" data-full="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Kamar tidur utama">
             <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=75" alt="Kamar tidur utama" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
           </button>
-          <button type="button" class="gallery-item group relative overflow-hidden rounded-2xl img-fallback aspect-square"
-                  data-full="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Dapur">
+          <button type="button" class="gallery-item group img-fallback aspect-square overflow-hidden" data-full="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Dapur">
             <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=75" alt="Dapur" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
           </button>
-          <button type="button" class="gallery-item group relative overflow-hidden rounded-2xl img-fallback aspect-square"
-                  data-full="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Kamar mandi">
+          <button type="button" class="gallery-item group img-fallback aspect-square overflow-hidden" data-full="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Kamar mandi">
             <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=600&q=75" alt="Kamar mandi" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
           </button>
-        </div>
-        <div class="mt-3 grid grid-cols-2 gap-3 sm:mt-4 sm:gap-4 md:grid-cols-3">
-          <button type="button" class="gallery-item group relative overflow-hidden rounded-2xl img-fallback aspect-[4/3]"
-                  data-full="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Tampak depan villa">
-            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=75" alt="Tampak depan villa" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          </button>
-          <button type="button" class="gallery-item group relative overflow-hidden rounded-2xl img-fallback aspect-[4/3]"
-                  data-full="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Kamar tidur kedua">
-            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=75" alt="Kamar tidur kedua" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          </button>
-          <button type="button" class="gallery-item group relative col-span-2 overflow-hidden rounded-2xl img-fallback aspect-[2/1] md:col-span-1 md:aspect-[4/3]"
-                  data-full="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Sawah di sekitar Pererenan">
-            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=75" alt="Sawah di sekitar Pererenan" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <button type="button" class="gallery-item group img-fallback aspect-square overflow-hidden" data-full="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=2000&q=85" aria-label="Perbesar foto: Ruang keluarga">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=75" alt="Ruang keluarga" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
           </button>
         </div>
       </div>
     </section>
 
-    <!-- ============ BOOKING ============ -->
-    <section id="booking" class="bg-forest py-20 text-white md:py-28">
-      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:gap-16 lg:px-8">
-        <div class="lg:col-span-2">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sand-300">Cek Ketersediaan</p>
-          <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Isi tanggal, kami balas dalam 15 menit.</h2>
-          <p class="mt-4 text-white/85 text-base sm:text-lg">Form ini menyusun pesan WhatsApp untuk Anda. Tinggal tekan kirim, tidak ada data yang kami simpan di website.</p>
-          <ul class="mt-8 space-y-4 text-white/90">
-            <li class="flex gap-3"><i class="fa-solid fa-tag mt-1 w-5 text-sand-300" aria-hidden="true"></i><span>Mulai <strong class="text-white">Rp 3.200.000</strong> / malam untuk seluruh villa</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-moon mt-1 w-5 text-sand-300" aria-hidden="true"></i><span>Minimal menginap 2 malam</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-percent mt-1 w-5 text-sand-300" aria-hidden="true"></i><span>Diskon 10% untuk menginap 7 malam atau lebih</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-clock mt-1 w-5 text-sand-300" aria-hidden="true"></i><span>Balasan cepat setiap hari 08.00–21.00 WITA</span></li>
-          </ul>
+    <!-- ============ STORY ============ -->
+    <section id="cerita" class="pb-16 md:pb-24">
+      <div class="mx-auto grid max-w-7xl px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+        <div class="flex flex-col justify-center bg-panel px-5 py-12 sm:px-10 lg:px-14">
+          <p class="eyebrow text-ink-mute">Cerita Kami</p>
+          <h2 class="mt-3 max-w-sm font-serif text-3xl font-medium leading-tight sm:text-4xl">Dibuat untuk yang mencari tenang.</h2>
+          <p class="mt-5 max-w-md text-sm text-ink-soft sm:text-[15px]">Lahan ini milik keluarga kami sejak 1990-an. Tahun 2021 kami membangun tiga villa dari kayu ulin dan batu alam, dengan satu prinsip: tamu harus bisa tidur nyenyak. Tidak ada pesta, tidak ada musik keras, dan staf kami tinggal di desa yang sama.</p>
+          <a href="#booking" class="mt-7 inline-flex min-h-[44px] w-fit items-center bg-ink px-5 text-[13px] font-semibold text-white hover:bg-ink/85">Tanya Pak Made</a>
         </div>
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80" alt="Area taman dan kolam villa di pagi hari" loading="lazy" class="img-fallback aspect-[4/3] h-full w-full object-cover md:aspect-auto">
+      </div>
+    </section>
 
-        <form id="booking-form" class="rounded-3xl bg-sand-50 p-6 text-ink shadow-xl sm:p-8 lg:col-span-3" novalidate>
-          <div class="grid gap-5 sm:grid-cols-2">
-            <div>
-              <label for="checkin" class="mb-2 block text-sm font-semibold">Tanggal Check-in</label>
-              <input id="checkin" name="checkin" type="date" required
-                     class="w-full min-h-[52px] rounded-xl border border-sand-300 bg-white px-4 text-base focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/30">
+    <!-- ============ REVIEWS ============ -->
+    <section id="ulasan" class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="eyebrow text-ink-mute">Ulasan Tamu</p>
+        <h2 class="mt-3 font-serif text-3xl font-medium sm:text-4xl">Kata mereka yang sudah menginap.</h2>
+        <div class="mt-10 grid gap-3 md:grid-cols-3">
+          <figure class="flex flex-col bg-panel p-6">
+            <p class="tracking-[0.15em]" role="img" aria-label="Rating 5 dari 5">★★★★★</p>
+            <blockquote class="mt-4 flex-1 text-sm text-ink-soft"><p>"Kami berenam dengan dua anak kecil. Kolamnya punya sisi dangkal, jadi anak-anak bisa main dengan aman. Dapurnya lengkap, kami masak hampir tiap malam."</p></blockquote>
+            <figcaption class="mt-6">
+              <p class="text-sm font-semibold">Rina S.</p>
+              <p class="text-xs text-ink-mute">Jakarta</p>
+              <p class="text-xs text-ink-mute">Menginap di Villa Kayu</p>
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col bg-panel p-6">
+            <p class="tracking-[0.15em]" role="img" aria-label="Rating 5 dari 5">★★★★★</p>
+            <blockquote class="mt-4 flex-1 text-sm text-ink-soft"><p>"Dua minggu kerja remote di sini. Wi-Fi stabil untuk video call setiap hari. Pak Made sangat membantu, bahkan mencarikan laundry dan servis motor."</p></blockquote>
+            <figcaption class="mt-6">
+              <p class="text-sm font-semibold">Daniel K.</p>
+              <p class="text-xs text-ink-mute">Melbourne, Australia</p>
+              <p class="text-xs text-ink-mute">Menginap di Villa Jepun</p>
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col bg-panel p-6">
+            <p class="tracking-[0.15em]" role="img" aria-label="Rating 5 dari 5">★★★★★</p>
+            <blockquote class="mt-4 flex-1 text-sm text-ink-soft"><p>"Fotonya sesuai aslinya. Kamarnya bersih, kasurnya empuk, dan malamnya benar-benar sepi. Ke pantai cuma sebentar naik motor."</p></blockquote>
+            <figcaption class="mt-6">
+              <p class="text-sm font-semibold">Ayu &amp; Bima</p>
+              <p class="text-xs text-ink-mute">Surabaya</p>
+              <p class="text-xs text-ink-mute">Menginap di Villa Kamboja</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING (overlap card, like restaurant block) ============ -->
+    <section id="booking" class="pb-16 md:pb-24">
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1800&q=80" alt="Kursi santai di tepi kolam renang" loading="lazy" class="img-fallback aspect-[4/3] w-full object-cover md:aspect-[16/8]">
+        <div class="relative bg-panel px-5 py-10 sm:px-10 md:-mt-48 md:ml-auto md:w-[62%] lg:w-[52%]">
+          <p class="eyebrow text-ink-mute">Cek Ketersediaan</p>
+          <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Isi tanggal, kami balas dalam 15 menit.</h2>
+          <p class="mt-3 text-sm text-ink-soft">Form ini hanya menyusun pesan WhatsApp. Tidak ada data yang disimpan di website. Minimal menginap 2 malam.</p>
+
+          <form id="booking-form" class="mt-7 grid gap-4 sm:grid-cols-2" novalidate>
+            <div class="sm:col-span-2">
+              <label for="villa-select" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider">Villa</label>
+              <select id="villa-select" name="villa" class="min-h-[48px] w-full border border-panel-line bg-white px-3 text-base focus:border-ink focus:outline-none">
+                <option value="Villa Kamboja" data-max="2">Villa Kamboja — 1 kamar, maks. 2 tamu</option>
+                <option value="Villa Jepun" data-max="4">Villa Jepun — 2 kamar, maks. 4 tamu</option>
+                <option value="Villa Kayu" data-max="6" selected>Villa Kayu — 3 kamar, maks. 6 tamu</option>
+              </select>
             </div>
             <div>
-              <label for="checkout" class="mb-2 block text-sm font-semibold">Tanggal Check-out</label>
-              <input id="checkout" name="checkout" type="date" required
-                     class="w-full min-h-[52px] rounded-xl border border-sand-300 bg-white px-4 text-base focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/30">
+              <label for="checkin" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider">Check-in</label>
+              <input id="checkin" type="date" required class="min-h-[48px] w-full border border-panel-line bg-white px-3 text-base focus:border-ink focus:outline-none">
             </div>
             <div>
-              <label for="guests" class="mb-2 block text-sm font-semibold">Jumlah Tamu</label>
-              <div class="flex items-center rounded-xl border border-sand-300 bg-white">
-                <button type="button" id="guests-minus" class="h-[52px] w-14 shrink-0 text-lg text-ink-soft hover:text-ink" aria-label="Kurangi tamu"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
-                <input id="guests" name="guests" type="number" min="1" max="6" value="2" inputmode="numeric" required
-                       class="h-[52px] w-full min-w-0 border-0 bg-transparent text-center text-base font-semibold focus:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
-                <button type="button" id="guests-plus" class="h-[52px] w-14 shrink-0 text-lg text-ink-soft hover:text-ink" aria-label="Tambah tamu"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+              <label for="checkout" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider">Check-out</label>
+              <input id="checkout" type="date" required class="min-h-[48px] w-full border border-panel-line bg-white px-3 text-base focus:border-ink focus:outline-none">
+            </div>
+            <div>
+              <label for="guests" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider">Jumlah Tamu</label>
+              <div class="flex items-center border border-panel-line bg-white">
+                <button type="button" id="guests-minus" class="h-12 w-12 shrink-0 text-ink-soft hover:text-ink" aria-label="Kurangi tamu"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+                <input id="guests" type="number" min="1" max="6" value="2" inputmode="numeric" class="h-12 w-full min-w-0 border-0 bg-transparent text-center text-base font-semibold focus:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
+                <button type="button" id="guests-plus" class="h-12 w-12 shrink-0 text-ink-soft hover:text-ink" aria-label="Tambah tamu"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
               </div>
             </div>
             <div>
-              <label for="guest-name" class="mb-2 block text-sm font-semibold">Nama <span class="font-normal text-ink-soft">(opsional)</span></label>
-              <input id="guest-name" name="name" type="text" autocomplete="name" placeholder="Nama Anda"
-                     class="w-full min-h-[52px] rounded-xl border border-sand-300 bg-white px-4 text-base placeholder:text-ink-soft/60 focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/30">
+              <label for="guest-name" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider">Nama <span class="font-normal normal-case tracking-normal text-ink-mute">(opsional)</span></label>
+              <input id="guest-name" type="text" autocomplete="name" placeholder="Nama Anda" class="min-h-[48px] w-full border border-panel-line bg-white px-3 text-base placeholder:text-ink-mute focus:border-ink focus:outline-none">
             </div>
             <div class="sm:col-span-2">
-              <label for="note" class="mb-2 block text-sm font-semibold">Catatan <span class="font-normal text-ink-soft">(opsional)</span></label>
-              <textarea id="note" name="note" rows="2" placeholder="Contoh: butuh jemputan bandara, membawa bayi, dll."
-                        class="w-full rounded-xl border border-sand-300 bg-white px-4 py-3 text-base placeholder:text-ink-soft/60 focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/30"></textarea>
+              <label for="note" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider">Catatan <span class="font-normal normal-case tracking-normal text-ink-mute">(opsional)</span></label>
+              <textarea id="note" rows="2" placeholder="Contoh: butuh jemputan bandara, membawa bayi" class="w-full border border-panel-line bg-white px-3 py-3 text-base placeholder:text-ink-mute focus:border-ink focus:outline-none"></textarea>
             </div>
-          </div>
 
-          <div id="booking-summary" class="mt-6 hidden rounded-xl bg-forest-light px-4 py-3 text-sm text-forest-dark" aria-live="polite"></div>
-          <p id="booking-error" class="mt-4 hidden rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-800" role="alert"></p>
+            <p id="booking-summary" class="hidden text-sm text-ink-soft sm:col-span-2" aria-live="polite"></p>
+            <p id="booking-error" class="hidden border-l-2 border-red-700 bg-red-50 px-3 py-2 text-sm font-medium text-red-800 sm:col-span-2" role="alert"></p>
 
-          <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-2 min-h-[56px] rounded-full bg-forest px-6 text-base font-semibold text-white hover:bg-forest-dark transition-colors">
-            <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i> Kirim via WhatsApp
-          </button>
-          <p class="mt-3 text-center text-xs text-ink-soft">Akan membuka WhatsApp dengan pesan yang sudah terisi.</p>
-        </form>
+            <button type="submit" class="inline-flex min-h-[52px] items-center justify-center gap-2 bg-ink px-6 text-sm font-semibold text-white hover:bg-ink/85 sm:col-span-2">
+              <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Kirim via WhatsApp
+            </button>
+          </form>
+        </div>
       </div>
     </section>
 
-    <!-- ============ LOKASI ============ -->
-    <section id="lokasi" class="py-20 md:py-28">
-      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+    <!-- ============ LOCATION ============ -->
+    <section id="lokasi" class="pb-16 md:pb-24">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-wood">Lokasi</p>
-          <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Tenang di malam hari, dekat ke semua tempat di siang hari.</h2>
-          <p class="mt-4 text-ink-soft text-base sm:text-lg">Villa ada di gang buntu, jadi tidak ada lalu lintas lewat depan rumah. Jalan utama Pererenan dengan kafe, restoran, dan minimarket bisa dicapai jalan kaki.</p>
-
-          <ul class="mt-8 divide-y divide-sand-200 border-y border-sand-200">
-            <li class="flex items-center justify-between gap-4 py-4">
-              <span class="flex items-center gap-3"><i class="fa-solid fa-umbrella-beach w-5 text-center text-forest" aria-hidden="true"></i>Pantai Pererenan</span>
-              <span class="shrink-0 text-sm font-semibold text-ink-soft">5 menit</span>
-            </li>
-            <li class="flex items-center justify-between gap-4 py-4">
-              <span class="flex items-center gap-3"><i class="fa-solid fa-mug-hot w-5 text-center text-forest" aria-hidden="true"></i>Kafe &amp; minimarket terdekat</span>
-              <span class="shrink-0 text-sm font-semibold text-ink-soft">3 menit jalan kaki</span>
-            </li>
-            <li class="flex items-center justify-between gap-4 py-4">
-              <span class="flex items-center gap-3"><i class="fa-solid fa-person-swimming w-5 text-center text-forest" aria-hidden="true"></i>Pantai Echo Beach, Canggu</span>
-              <span class="shrink-0 text-sm font-semibold text-ink-soft">10 menit</span>
-            </li>
-            <li class="flex items-center justify-between gap-4 py-4">
-              <span class="flex items-center gap-3"><i class="fa-solid fa-gopuram w-5 text-center text-forest" aria-hidden="true"></i>Pura Tanah Lot</span>
-              <span class="shrink-0 text-sm font-semibold text-ink-soft">25 menit</span>
-            </li>
-            <li class="flex items-center justify-between gap-4 py-4">
-              <span class="flex items-center gap-3"><i class="fa-solid fa-bag-shopping w-5 text-center text-forest" aria-hidden="true"></i>Seminyak</span>
-              <span class="shrink-0 text-sm font-semibold text-ink-soft">30 menit</span>
-            </li>
-            <li class="flex items-center justify-between gap-4 py-4">
-              <span class="flex items-center gap-3"><i class="fa-solid fa-plane-arrival w-5 text-center text-forest" aria-hidden="true"></i>Bandara Ngurah Rai</span>
-              <span class="shrink-0 text-sm font-semibold text-ink-soft">45–60 menit</span>
-            </li>
+          <p class="eyebrow text-ink-mute">Lokasi</p>
+          <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Sepi di malam hari, dekat ke mana-mana di siang hari.</h2>
+          <p class="mt-4 text-sm text-ink-soft sm:text-[15px]">Villa ada di gang buntu, jadi tidak ada kendaraan lewat depan rumah. Kafe, restoran, dan minimarket di jalan utama Pererenan bisa dicapai jalan kaki.</p>
+          <ul class="mt-8 divide-y divide-panel-line border-y border-panel-line text-sm">
+            <li class="flex items-center justify-between gap-4 py-4"><span class="flex items-center gap-3"><i class="fa-solid fa-umbrella-beach w-4 text-center" aria-hidden="true"></i>Pantai Pererenan</span><span class="shrink-0 text-ink-mute">5 menit</span></li>
+            <li class="flex items-center justify-between gap-4 py-4"><span class="flex items-center gap-3"><i class="fa-solid fa-mug-hot w-4 text-center" aria-hidden="true"></i>Kafe &amp; minimarket</span><span class="shrink-0 text-ink-mute">3 menit jalan kaki</span></li>
+            <li class="flex items-center justify-between gap-4 py-4"><span class="flex items-center gap-3"><i class="fa-solid fa-person-swimming w-4 text-center" aria-hidden="true"></i>Echo Beach, Canggu</span><span class="shrink-0 text-ink-mute">10 menit</span></li>
+            <li class="flex items-center justify-between gap-4 py-4"><span class="flex items-center gap-3"><i class="fa-solid fa-gopuram w-4 text-center" aria-hidden="true"></i>Pura Tanah Lot</span><span class="shrink-0 text-ink-mute">25 menit</span></li>
+            <li class="flex items-center justify-between gap-4 py-4"><span class="flex items-center gap-3"><i class="fa-solid fa-plane-arrival w-4 text-center" aria-hidden="true"></i>Bandara Ngurah Rai</span><span class="shrink-0 text-ink-mute">45–60 menit</span></li>
           </ul>
-          <p class="mt-4 text-sm text-ink-soft">Waktu tempuh dengan mobil/motor, di luar jam sibuk.</p>
+          <p class="mt-3 text-xs text-ink-mute">Waktu tempuh dengan mobil/motor, di luar jam sibuk.</p>
         </div>
-
         <div class="flex flex-col">
-          <div class="relative min-h-[320px] flex-1 overflow-hidden rounded-3xl border border-sand-200 bg-sand-200 lg:min-h-[480px]">
-            <iframe
-              title="Peta lokasi Villa Kayu di Pererenan, Canggu"
-              src="https://www.google.com/maps?q=Pererenan,+Mengwi,+Badung,+Bali&z=14&output=embed"
-              class="absolute inset-0 h-full w-full border-0"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="relative min-h-[320px] flex-1 bg-panel lg:min-h-[440px]">
+            <iframe title="Peta lokasi Villa Kayu di Pererenan, Canggu" src="https://www.google.com/maps?q=Pererenan,+Mengwi,+Badung,+Bali&z=14&output=embed" class="absolute inset-0 h-full w-full border-0 grayscale-[30%]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           </div>
-          <a href="https://maps.google.com/?q=Pererenan,+Mengwi,+Badung,+Bali" target="_blank" rel="noopener"
-             class="mt-4 inline-flex items-center justify-center gap-2 min-h-[48px] rounded-full border border-ink/20 px-6 text-sm font-semibold hover:bg-sand-100 transition-colors">
+          <a href="https://maps.google.com/?q=Pererenan,+Mengwi,+Badung,+Bali" target="_blank" rel="noopener" class="mt-3 inline-flex min-h-[44px] w-fit items-center gap-2 border border-ink px-4 text-[13px] font-semibold hover:bg-ink hover:text-white">
             <i class="fa-solid fa-location-arrow" aria-hidden="true"></i> Buka di Google Maps
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ ULASAN ============ -->
-    <section id="ulasan" class="bg-sand-100 py-20 md:py-28">
+    <!-- ============ JOURNAL ============ -->
+    <section id="jurnal" class="pb-16 md:pb-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-wood">Ulasan Tamu</p>
-            <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Kata mereka yang sudah menginap.</h2>
+            <p class="eyebrow text-ink-mute">Jurnal</p>
+            <h2 class="mt-3 font-serif text-3xl font-medium sm:text-4xl">Dari Villa Kayu.</h2>
           </div>
-          <p class="flex items-center gap-2 text-sm text-ink-soft">
-            <span class="font-serif text-2xl text-ink">4,9</span> / 5 dari 86 ulasan
-          </p>
+          <a href="blog.html" class="inline-flex min-h-[44px] w-fit items-center border border-ink px-4 text-[13px] font-semibold hover:bg-ink hover:text-white">Semua Artikel</a>
         </div>
-
-        <div class="mt-10 grid gap-4 md:grid-cols-3">
-          <figure class="flex flex-col rounded-2xl border border-sand-200 bg-white p-6 sm:p-8">
-            <div class="flex gap-1 text-wood" role="img" aria-label="Rating 5 dari 5">
-              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <blockquote class="mt-4 flex-1 text-ink-soft">
-              <p>"Kami berangkat berenam dengan dua anak kecil. Kolamnya tidak terlalu dalam di satu sisi, jadi anak-anak bisa main dengan aman. Dapurnya lengkap sekali, kami masak hampir tiap malam."</p>
-            </blockquote>
-            <figcaption class="mt-6 border-t border-sand-200 pt-4">
-              <p class="font-semibold">Rina S.</p>
-              <p class="text-sm text-ink-soft">Jakarta · Liburan keluarga, Juli 2026</p>
-            </figcaption>
-          </figure>
-          <figure class="flex flex-col rounded-2xl border border-sand-200 bg-white p-6 sm:p-8">
-            <div class="flex gap-1 text-wood" role="img" aria-label="Rating 5 dari 5">
-              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <blockquote class="mt-4 flex-1 text-ink-soft">
-              <p>"Saya kerja remote dua minggu di sini. Wi-Fi stabil, sempat video call tiap hari tanpa putus. Pak Made yang jaga villa sangat membantu, bahkan carikan laundry kiloan."</p>
-            </blockquote>
-            <figcaption class="mt-6 border-t border-sand-200 pt-4">
-              <p class="font-semibold">Daniel K.</p>
-              <p class="text-sm text-ink-soft">Melbourne · Workation, Agustus 2026</p>
-            </figcaption>
-          </figure>
-          <figure class="flex flex-col rounded-2xl border border-sand-200 bg-white p-6 sm:p-8">
-            <div class="flex gap-1 text-wood" role="img" aria-label="Rating 5 dari 5">
-              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <blockquote class="mt-4 flex-1 text-ink-soft">
-              <p>"Fotonya sesuai aslinya. Kamarnya bersih, kasurnya empuk, dan malam benar-benar sepi. Ke pantai cuma sebentar naik motor. Tahun depan mau balik lagi."</p>
-            </blockquote>
-            <figcaption class="mt-6 border-t border-sand-200 pt-4">
-              <p class="font-semibold">Ayu &amp; Bima</p>
-              <p class="text-sm text-ink-soft">Surabaya · Bulan madu, September 2026</p>
-            </figcaption>
-          </figure>
-        </div>
+        <ul class="mt-10 grid gap-3 md:grid-cols-3">
+          <li>
+            <a href="blog.html" class="group flex h-full flex-col bg-panel">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=75" alt="Sawah dan pura di Bali" loading="lazy" class="img-fallback aspect-[4/3] w-full object-cover">
+              <div class="flex flex-1 flex-col p-5">
+                <p class="eyebrow text-ink-mute">Sekitar</p>
+                <h3 class="mt-2 text-[15px] font-semibold group-hover:underline group-hover:underline-offset-4">Panduan Jalan Kaki di Pererenan</h3>
+                <p class="mt-2 flex-1 text-sm text-ink-soft">Enam tempat makan, ngopi, dan melihat sunset yang bisa dicapai tanpa kendaraan.</p>
+                <p class="mt-4 text-xs text-ink-mute">12 Okt 2026</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="blog.html" class="group flex h-full flex-col bg-panel">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=75" alt="Hidangan di atas meja makan" loading="lazy" class="img-fallback aspect-[4/3] w-full object-cover">
+              <div class="flex flex-1 flex-col p-5">
+                <p class="eyebrow text-ink-mute">Kuliner</p>
+                <h3 class="mt-2 text-[15px] font-semibold group-hover:underline group-hover:underline-offset-4">Warung Lokal Favorit Staf Kami</h3>
+                <p class="mt-2 flex-1 text-sm text-ink-soft">Babi guling, nasi campur, dan sate lilit yang tidak ada di daftar turis.</p>
+                <p class="mt-4 text-xs text-ink-mute">28 Sep 2026</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="blog.html" class="group flex h-full flex-col bg-panel">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=75" alt="Pantai saat matahari terbenam" loading="lazy" class="img-fallback aspect-[4/3] w-full object-cover">
+              <div class="flex flex-1 flex-col p-5">
+                <p class="eyebrow text-ink-mute">Perjalanan</p>
+                <h3 class="mt-2 text-[15px] font-semibold group-hover:underline group-hover:underline-offset-4">Jam Terbaik ke Pantai Pererenan</h3>
+                <p class="mt-2 flex-1 text-sm text-ink-soft">Kapan ombak bagus untuk belajar surfing dan kapan pantai paling sepi.</p>
+                <p class="mt-4 text-xs text-ink-mute">10 Sep 2026</p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- ============ FAQ ============ -->
-    <section id="faq" class="py-20 md:py-28">
-      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3 lg:gap-16 lg:px-8">
+    <section id="faq" class="pb-16 md:pb-24">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:gap-14 lg:px-8">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-wood">FAQ</p>
+          <p class="eyebrow text-ink-mute">FAQ</p>
           <h2 class="mt-3 font-serif text-3xl font-medium leading-tight sm:text-4xl">Pertanyaan yang sering masuk.</h2>
-          <p class="mt-4 text-ink-soft">Tidak menemukan jawabannya? <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="font-semibold text-forest underline underline-offset-4 inline-flex min-h-[44px] items-center">Tanya langsung di WhatsApp</a>.</p>
+          <p class="mt-4 text-sm text-ink-soft">Belum terjawab? <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center font-semibold underline underline-offset-4">Tanya di WhatsApp</a></p>
         </div>
-
-        <div id="faq-list" class="divide-y divide-sand-200 border-y border-sand-200 lg:col-span-2">
+        <div class="divide-y divide-panel-line border-y border-panel-line lg:col-span-2">
           <div class="faq-item" data-open="false">
-            <h3>
-              <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold sm:text-lg min-h-[56px]" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
-                Jam berapa check-in dan check-out?
-                <i class="faq-icon fa-solid fa-plus shrink-0 text-wood transition-transform duration-200" aria-hidden="true"></i>
-              </button>
-            </h3>
-            <div id="faq-1" class="faq-panel" role="region" aria-labelledby="faq-btn-1">
-              <div><p class="pb-5 text-ink-soft">Check-in mulai pukul 14.00 WITA dan check-out paling lambat pukul 12.00 WITA. Early check-in atau late check-out bisa diatur jika tidak ada tamu sebelum/sesudah Anda. Silakan tanyakan saat booking.</p></div>
-            </div>
+            <h3><button type="button" class="faq-trigger flex min-h-[56px] w-full items-center justify-between gap-4 py-4 text-left text-[15px] font-semibold" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">Jam berapa check-in dan check-out?<i class="faq-icon fa-solid fa-plus shrink-0 text-sm transition-transform duration-200" aria-hidden="true"></i></button></h3>
+            <div id="faq-1" class="faq-panel" role="region" aria-labelledby="faq-btn-1"><div><p class="pb-5 text-sm text-ink-soft">Check-in mulai 14.00 WITA, check-out paling lambat 12.00 WITA. Early check-in atau late check-out bisa diatur jika villa kosong sebelum/sesudah Anda.</p></div></div>
           </div>
           <div class="faq-item" data-open="false">
-            <h3>
-              <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold sm:text-lg min-h-[56px]" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
-                Bagaimana sistem pembayaran dan deposit?
-                <i class="faq-icon fa-solid fa-plus shrink-0 text-wood transition-transform duration-200" aria-hidden="true"></i>
-              </button>
-            </h3>
-            <div id="faq-2" class="faq-panel" role="region" aria-labelledby="faq-btn-2">
-              <div><p class="pb-5 text-ink-soft">Untuk mengunci tanggal, Anda transfer DP 30% dari total biaya. Pelunasan dilakukan paling lambat 7 hari sebelum check-in. Saat tiba, ada deposit keamanan Rp 1.000.000 yang dikembalikan penuh saat check-out jika tidak ada kerusakan.</p></div>
-            </div>
+            <h3><button type="button" class="faq-trigger flex min-h-[56px] w-full items-center justify-between gap-4 py-4 text-left text-[15px] font-semibold" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">Bagaimana sistem pembayaran dan deposit?<i class="faq-icon fa-solid fa-plus shrink-0 text-sm transition-transform duration-200" aria-hidden="true"></i></button></h3>
+            <div id="faq-2" class="faq-panel" role="region" aria-labelledby="faq-btn-2"><div><p class="pb-5 text-sm text-ink-soft">DP 30% untuk mengunci tanggal, pelunasan paling lambat 7 hari sebelum check-in. Saat tiba ada deposit keamanan Rp 1.000.000, dikembalikan penuh saat check-out jika tidak ada kerusakan.</p></div></div>
           </div>
           <div class="faq-item" data-open="false">
-            <h3>
-              <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold sm:text-lg min-h-[56px]" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
-                Apa kebijakan pembatalannya?
-                <i class="faq-icon fa-solid fa-plus shrink-0 text-wood transition-transform duration-200" aria-hidden="true"></i>
-              </button>
-            </h3>
-            <div id="faq-3" class="faq-panel" role="region" aria-labelledby="faq-btn-3">
-              <div><p class="pb-5 text-ink-soft">Pembatalan lebih dari 30 hari sebelum check-in: DP dikembalikan penuh. 14–30 hari: DP dikembalikan 50%. Kurang dari 14 hari: DP tidak dapat dikembalikan, tetapi bisa dipindah ke tanggal lain dalam 6 bulan.</p></div>
-            </div>
+            <h3><button type="button" class="faq-trigger flex min-h-[56px] w-full items-center justify-between gap-4 py-4 text-left text-[15px] font-semibold" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">Apa kebijakan pembatalannya?<i class="faq-icon fa-solid fa-plus shrink-0 text-sm transition-transform duration-200" aria-hidden="true"></i></button></h3>
+            <div id="faq-3" class="faq-panel" role="region" aria-labelledby="faq-btn-3"><div><p class="pb-5 text-sm text-ink-soft">Lebih dari 30 hari sebelum check-in: DP kembali penuh. 14–30 hari: kembali 50%. Kurang dari 14 hari: DP tidak kembali, tetapi bisa dipindah ke tanggal lain dalam 6 bulan.</p></div></div>
           </div>
           <div class="faq-item" data-open="false">
-            <h3>
-              <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold sm:text-lg min-h-[56px]" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
-                Apakah sarapan sudah termasuk?
-                <i class="faq-icon fa-solid fa-plus shrink-0 text-wood transition-transform duration-200" aria-hidden="true"></i>
-              </button>
-            </h3>
-            <div id="faq-4" class="faq-panel" role="region" aria-labelledby="faq-btn-4">
-              <div><p class="pb-5 text-ink-soft">Harga belum termasuk sarapan. Staf kami bisa memasakkan sarapan (nasi goreng, pancake, buah) dengan biaya Rp 75.000 per orang. Pesan sehari sebelumnya.</p></div>
-            </div>
-          </div>
-          <div class="faq-item" data-open="false">
-            <h3>
-              <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold sm:text-lg min-h-[56px]" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
-                Boleh membawa hewan peliharaan atau mengadakan acara?
-                <i class="faq-icon fa-solid fa-plus shrink-0 text-wood transition-transform duration-200" aria-hidden="true"></i>
-              </button>
-            </h3>
-            <div id="faq-5" class="faq-panel" role="region" aria-labelledby="faq-btn-5">
-              <div><p class="pb-5 text-ink-soft">Hewan peliharaan belum bisa kami terima. Acara kecil seperti makan malam ulang tahun boleh, tetapi pesta dan musik keras tidak diizinkan setelah pukul 22.00 karena villa berada di lingkungan warga.</p></div>
-            </div>
-          </div>
-          <div class="faq-item" data-open="false">
-            <h3>
-              <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold sm:text-lg min-h-[56px]" aria-expanded="false" aria-controls="faq-6" id="faq-btn-6">
-                Apakah bisa dijemput dari bandara?
-                <i class="faq-icon fa-solid fa-plus shrink-0 text-wood transition-transform duration-200" aria-hidden="true"></i>
-              </button>
-            </h3>
-            <div id="faq-6" class="faq-panel" role="region" aria-labelledby="faq-btn-6">
-              <div><p class="pb-5 text-ink-soft">Bisa. Penjemputan dari Bandara Ngurah Rai dengan mobil 7 kursi Rp 350.000 sekali jalan. Kirimkan nomor penerbangan Anda minimal 2 hari sebelum kedatangan.</p></div>
-            </div>
+            <h3><button type="button" class="faq-trigger flex min-h-[56px] w-full items-center justify-between gap-4 py-4 text-left text-[15px] font-semibold" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">Boleh membawa hewan peliharaan atau mengadakan acara?<i class="faq-icon fa-solid fa-plus shrink-0 text-sm transition-transform duration-200" aria-hidden="true"></i></button></h3>
+            <div id="faq-4" class="faq-panel" role="region" aria-labelledby="faq-btn-4"><div><p class="pb-5 text-sm text-ink-soft">Hewan peliharaan belum bisa kami terima. Makan malam kecil boleh, tetapi pesta dan musik keras tidak diizinkan setelah 22.00 karena villa berada di lingkungan warga.</p></div></div>
           </div>
         </div>
       </div>
@@ -547,58 +463,63 @@
   </main>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="bg-ink text-sand-200">
-    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8">
+  <footer class="border-t border-panel-line">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:px-8">
       <div>
-        <p class="font-serif text-2xl text-white">Villa Kayu</p>
-        <p class="mt-3 max-w-xs text-sm text-sand-300">Private pool villa 3 kamar tidur di Pererenan, Canggu. Dikelola langsung oleh pemilik.</p>
-      </div>
-      <div>
-        <h2 class="text-sm font-semibold uppercase tracking-[0.15em] text-white">Alamat</h2>
-        <address class="mt-3 not-italic text-sm leading-relaxed text-sand-300">
-          Jl. Pantai Pererenan, Gg. Kayu No. 8<br>
-          Pererenan, Kec. Mengwi<br>
-          Kabupaten Badung, Bali 80351
-        </address>
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="mt-3 inline-flex min-h-[44px] items-center gap-2 text-sm text-white hover:underline underline-offset-4">
-          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> +62 812-3456-7890
-        </a>
-      </div>
-      <div>
-        <h2 class="text-sm font-semibold uppercase tracking-[0.15em] text-white">Ikuti Kami</h2>
-        <ul class="mt-3 flex gap-2">
-          <li><a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-ink transition-colors"><i class="fa-brands fa-instagram text-lg" aria-hidden="true"></i></a></li>
-          <li><a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-ink transition-colors"><i class="fa-brands fa-facebook-f text-lg" aria-hidden="true"></i></a></li>
-          <li><a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-ink transition-colors"><i class="fa-brands fa-tiktok text-lg" aria-hidden="true"></i></a></li>
-          <li><a href="mailto:halo@villakayu.example" aria-label="Email" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-ink transition-colors"><i class="fa-solid fa-envelope text-lg" aria-hidden="true"></i></a></li>
+        <p class="font-serif text-xl font-medium">Villa Kayu</p>
+        <p class="mt-1 text-xs text-ink-mute">Private pool villa di Pererenan, Bali.</p>
+        <ul class="mt-4 flex gap-1">
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center hover:bg-panel"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center hover:bg-panel"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp" class="flex h-11 w-11 items-center justify-center hover:bg-panel"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+          <li><a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="flex h-11 w-11 items-center justify-center hover:bg-panel"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
         </ul>
       </div>
+      <nav aria-label="Navigasi footer">
+        <h2 class="text-xs font-semibold">Navigasi</h2>
+        <ul class="mt-3 text-xs text-ink-soft">
+          <li><a href="#villa" class="inline-flex min-h-[44px] items-center hover:text-ink">Villa</a></li>
+          <li><a href="#layanan" class="inline-flex min-h-[44px] items-center hover:text-ink">Layanan</a></li>
+          <li><a href="#galeri" class="inline-flex min-h-[44px] items-center hover:text-ink">Galeri</a></li>
+          <li><a href="#cerita" class="inline-flex min-h-[44px] items-center hover:text-ink">Tentang</a></li>
+          <li><a href="#booking" class="inline-flex min-h-[44px] items-center hover:text-ink">Booking</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="text-xs font-semibold">Info</h2>
+        <ul class="mt-3 text-xs text-ink-soft">
+          <li><a href="#faq" class="inline-flex min-h-[44px] items-center hover:text-ink">FAQ &amp; Kebijakan</a></li>
+          <li><a href="#lokasi" class="inline-flex min-h-[44px] items-center hover:text-ink">Lokasi</a></li>
+          <li><a href="blog.html" class="inline-flex min-h-[44px] items-center hover:text-ink">Jurnal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-semibold">Kontak</h2>
+        <address class="mt-3 text-xs not-italic leading-6 text-ink-soft">
+          Jl. Pantai Pererenan, Gg. Kayu No. 8<br>Mengwi, Badung, Bali 80351<br>
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="hover:text-ink">+62 812-3456-7890</a><br>
+          <a href="mailto:halo@villakayu.example" class="hover:text-ink">halo@villakayu.example</a>
+        </address>
+      </div>
     </div>
-    <div class="border-t border-white/10">
-      <p class="mx-auto max-w-7xl px-4 py-6 text-xs text-sand-300 sm:px-6 lg:px-8">&copy; <span id="year">2026</span> Villa Kayu Pererenan. Hak cipta dilindungi.</p>
+    <div class="mx-auto max-w-7xl border-t border-panel-line px-4 py-6 sm:px-6 lg:px-8">
+      <p class="text-xs text-ink-mute">&copy; <span id="year">2026</span> Villa Kayu Pererenan. Hak cipta dilindungi.</p>
     </div>
   </footer>
 
   <!-- ============ FLOATING WA ============ -->
-  <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tanya%20ketersediaan%20Villa%20Kayu%20Pererenan." target="_blank" rel="noopener"
-     class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#1E8E4E] text-white shadow-lg shadow-black/20 hover:bg-[#177540] transition-colors"
-     aria-label="Chat WhatsApp">
+  <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tanya%20ketersediaan%20Villa%20Kayu." target="_blank" rel="noopener"
+     class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#1E8E4E] text-white shadow-lg shadow-black/25 hover:bg-[#177540]" aria-label="Chat WhatsApp">
     <i class="fa-brands fa-whatsapp text-3xl" aria-hidden="true"></i>
   </a>
 
   <!-- ============ LIGHTBOX ============ -->
-  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/90 p-4" role="dialog" aria-modal="true" aria-label="Foto diperbesar">
-    <button id="lb-close" type="button" class="absolute right-3 top-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20" aria-label="Tutup">
-      <i class="fa-solid fa-xmark text-2xl" aria-hidden="true"></i>
-    </button>
-    <button id="lb-prev" type="button" class="absolute left-2 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 sm:left-4" aria-label="Foto sebelumnya">
-      <i class="fa-solid fa-chevron-left text-xl" aria-hidden="true"></i>
-    </button>
-    <button id="lb-next" type="button" class="absolute right-2 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 sm:right-4" aria-label="Foto berikutnya">
-      <i class="fa-solid fa-chevron-right text-xl" aria-hidden="true"></i>
-    </button>
+  <div id="lightbox" class="on-dark fixed inset-0 z-[60] hidden items-center justify-center bg-black/95 p-4" role="dialog" aria-modal="true" aria-label="Foto diperbesar">
+    <button id="lb-close" type="button" class="absolute right-3 top-3 flex h-12 w-12 items-center justify-center text-white hover:bg-white/10" aria-label="Tutup"><i class="fa-solid fa-xmark text-2xl" aria-hidden="true"></i></button>
+    <button id="lb-prev" type="button" class="absolute left-2 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center text-white hover:bg-white/10" aria-label="Foto sebelumnya"><i class="fa-solid fa-chevron-left text-xl" aria-hidden="true"></i></button>
+    <button id="lb-next" type="button" class="absolute right-2 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center text-white hover:bg-white/10" aria-label="Foto berikutnya"><i class="fa-solid fa-chevron-right text-xl" aria-hidden="true"></i></button>
     <figure class="flex max-h-full max-w-6xl flex-col items-center">
-      <img id="lb-img" src="" alt="" class="max-h-[80vh] w-auto max-w-full rounded-lg object-contain">
+      <img id="lb-img" src="" alt="" class="max-h-[80vh] w-auto max-w-full object-contain">
       <figcaption id="lb-caption" class="mt-3 text-center text-sm text-white/80"></figcaption>
     </figure>
   </div>
@@ -607,18 +528,16 @@
     (function () {
       var WA_NUMBER = '6281234567890';
 
-      /* ---------- Sticky header ---------- */
+      /* ---------- Header & mobile menu ---------- */
       var header = document.getElementById('site-header');
-      function onScroll() { header.classList.toggle('scrolled', window.scrollY > 40 || !mobileMenu.classList.contains('hidden')); }
-
-      /* ---------- Mobile menu ---------- */
       var menuBtn = document.getElementById('menu-btn');
       var mobileMenu = document.getElementById('mobile-menu');
+      function onScroll() { header.classList.toggle('scrolled', window.scrollY > 40 || !mobileMenu.classList.contains('hidden')); }
       function setMenu(open) {
         mobileMenu.classList.toggle('hidden', !open);
         menuBtn.setAttribute('aria-expanded', String(open));
         menuBtn.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
-        menuBtn.querySelector('i').className = open ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+        menuBtn.querySelector('i').className = open ? 'fa-solid fa-xmark text-lg' : 'fa-solid fa-bars text-lg';
         onScroll();
       }
       menuBtn.addEventListener('click', function () { setMenu(mobileMenu.classList.contains('hidden')); });
@@ -633,7 +552,6 @@
       var lbImg = document.getElementById('lb-img');
       var lbCap = document.getElementById('lb-caption');
       var current = 0, lastFocus = null;
-
       function show(i) {
         current = (i + items.length) % items.length;
         var thumb = items[current].querySelector('img');
@@ -642,16 +560,14 @@
         lbCap.textContent = thumb.alt + '  ·  ' + (current + 1) + ' / ' + items.length;
       }
       function openLb(i) {
-        lastFocus = document.activeElement;
-        show(i);
+        lastFocus = document.activeElement; show(i);
         lb.classList.remove('hidden'); lb.classList.add('flex');
         document.body.style.overflow = 'hidden';
         document.getElementById('lb-close').focus();
       }
       function closeLb() {
         lb.classList.add('hidden'); lb.classList.remove('flex');
-        document.body.style.overflow = '';
-        lbImg.src = '';
+        document.body.style.overflow = ''; lbImg.src = '';
         if (lastFocus) lastFocus.focus();
       }
       items.forEach(function (el, i) { el.addEventListener('click', function () { openLb(i); }); });
@@ -665,13 +581,11 @@
         else if (e.key === 'ArrowLeft') show(current - 1);
         else if (e.key === 'ArrowRight') show(current + 1);
         else if (e.key === 'Tab') {
-          var f = lb.querySelectorAll('button');
-          var first = f[0], last = f[f.length - 1];
+          var f = lb.querySelectorAll('button'), first = f[0], last = f[f.length - 1];
           if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
           else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
         }
       });
-      // Swipe on touch devices
       var touchX = null;
       lb.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
       lb.addEventListener('touchend', function (e) {
@@ -683,28 +597,23 @@
 
       /* ---------- Booking -> WhatsApp ---------- */
       var form = document.getElementById('booking-form');
+      var villa = document.getElementById('villa-select');
       var cin = document.getElementById('checkin');
       var cout = document.getElementById('checkout');
       var guests = document.getElementById('guests');
       var summary = document.getElementById('booking-summary');
       var errorBox = document.getElementById('booking-error');
-      var MIN_NIGHTS = 2, MAX_GUESTS = 6;
+      var MIN_NIGHTS = 2;
 
-      function iso(d) {
-        return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-      }
+      function maxGuests() { return parseInt(villa.selectedOptions[0].dataset.max, 10); }
+      function iso(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
       function parse(v) { var p = v.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
-      function fmt(v) {
-        return parse(v).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-      }
-      function nights() {
-        if (!cin.value || !cout.value) return 0;
-        return Math.round((parse(cout.value) - parse(cin.value)) / 86400000);
-      }
+      function fmt(v) { return parse(v).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); }
+      function nights() { return (cin.value && cout.value) ? Math.round((parse(cout.value) - parse(cin.value)) / 86400000) : 0; }
 
       var today = new Date(); today.setHours(0, 0, 0, 0);
       cin.min = iso(today);
-      var tmin = new Date(today); tmin.setDate(tmin.getDate() + 1); cout.min = iso(tmin);
+      var tmin = new Date(today); tmin.setDate(tmin.getDate() + MIN_NIGHTS); cout.min = iso(tmin);
 
       cin.addEventListener('change', function () {
         if (!cin.value) return;
@@ -716,11 +625,12 @@
       cout.addEventListener('change', update);
 
       function clampGuests() {
-        var n = parseInt(guests.value, 10);
+        var n = parseInt(guests.value, 10), max = maxGuests();
         if (isNaN(n) || n < 1) n = 1;
-        if (n > MAX_GUESTS) n = MAX_GUESTS;
-        guests.value = n;
+        if (n > max) n = max;
+        guests.max = max; guests.value = n;
       }
+      villa.addEventListener('change', clampGuests);
       document.getElementById('guests-minus').addEventListener('click', function () { guests.value = (parseInt(guests.value, 10) || 1) - 1; clampGuests(); });
       document.getElementById('guests-plus').addEventListener('click', function () { guests.value = (parseInt(guests.value, 10) || 0) + 1; clampGuests(); });
       guests.addEventListener('change', clampGuests);
@@ -728,18 +638,10 @@
       function update() {
         var n = nights();
         errorBox.classList.add('hidden');
-        if (n > 0) {
-          summary.textContent = n + ' malam · ' + fmt(cin.value) + ' → ' + fmt(cout.value);
-          summary.classList.remove('hidden');
-        } else {
-          summary.classList.add('hidden');
-        }
+        if (n > 0) { summary.textContent = n + ' malam · ' + fmt(cin.value) + ' → ' + fmt(cout.value); summary.classList.remove('hidden'); }
+        else summary.classList.add('hidden');
       }
-      function showError(msg, field) {
-        errorBox.textContent = msg;
-        errorBox.classList.remove('hidden');
-        if (field) field.focus();
-      }
+      function showError(msg, field) { errorBox.textContent = msg; errorBox.classList.remove('hidden'); if (field) field.focus(); }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -756,6 +658,7 @@
         var lines = [
           'Halo Villa Kayu, saya ingin cek ketersediaan:',
           '',
+          '• Villa: ' + villa.value,
           '• Check-in: ' + fmt(cin.value),
           '• Check-out: ' + fmt(cout.value),
           '• Durasi: ' + n + ' malam',
@@ -764,32 +667,28 @@
         if (name) lines.push('• Nama: ' + name);
         if (note) lines.push('• Catatan: ' + note);
         lines.push('', 'Mohon info harga totalnya. Terima kasih.');
-
-        var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
-        window.open(url, '_blank', 'noopener');
+        window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
       });
 
       /* ---------- FAQ accordion ---------- */
       var faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(function (item) {
         var btn = item.querySelector('.faq-trigger');
-        var panel = item.querySelector('.faq-panel');
         btn.addEventListener('click', function () {
           var willOpen = item.dataset.open !== 'true';
-          faqItems.forEach(function (other) {
-            other.dataset.open = 'false';
-            other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
-            other.querySelector('.faq-panel').classList.remove('open');
+          faqItems.forEach(function (o) {
+            o.dataset.open = 'false';
+            o.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+            o.querySelector('.faq-panel').classList.remove('open');
           });
           if (willOpen) {
             item.dataset.open = 'true';
             btn.setAttribute('aria-expanded', 'true');
-            panel.classList.add('open');
+            item.querySelector('.faq-panel').classList.add('open');
           }
         });
       });
 
-      /* ---------- Footer year ---------- */
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
   </script>
